@@ -1,0 +1,174 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base styles */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 4rem;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    @apply bg-[#0A0F1C] text-white overflow-x-hidden;
+  }
+
+  /* Improve touch targets on mobile */
+  button, a {
+    @apply min-h-[44px] min-w-[44px];
+  }
+}
+
+/* Modal styles */
+.modal-overlay {
+  @apply fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm 
+    overscroll-contain touch-none;
+}
+
+.modal-content {
+  @apply relative z-[10000] bg-gray-800 rounded-lg w-full max-w-lg overflow-hidden shadow-2xl
+    max-h-[90vh] overscroll-contain;
+  transform: translateZ(0);
+}
+
+/* Section styles */
+section {
+  @apply relative z-10 w-full;
+  scroll-margin-top: 4rem;
+}
+
+/* Performance optimizations */
+.gpu-accelerated {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Flip card animations */
+.flip-card {
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+
+/* Glass effect */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Smooth transitions */
+.section-transition {
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Timeline styles */
+.timeline-path {
+  @apply absolute left-1/2 top-0 h-full -translate-x-1/2 w-[120px];
+}
+
+/* Progress bar */
+.progress-bar {
+  @apply fixed top-0 left-0 right-0 h-1 bg-blue-500 origin-left z-[9998];
+}
+
+/* Mobile optimizations */
+@media (max-width: 640px) {
+  /* Improve touch targets */
+  .touch-target {
+    @apply min-h-[44px] min-w-[44px] p-3;
+  }
+
+  /* Adjust text sizes */
+  h1 {
+    @apply text-3xl sm:text-4xl md:text-5xl;
+  }
+
+  h2 {
+    @apply text-2xl sm:text-3xl md:text-4xl;
+  }
+
+  h3 {
+    @apply text-xl sm:text-2xl;
+  }
+
+  /* Adjust spacing */
+  .container {
+    @apply px-4;
+  }
+
+  section {
+    @apply py-12 sm:py-16 md:py-20;
+  }
+
+  /* Improve modal usability */
+  .modal-content {
+    @apply mx-4 max-h-[85vh];
+  }
+
+  /* Adjust grid layouts */
+  .grid {
+    @apply gap-4 sm:gap-6 md:gap-8;
+  }
+
+  /* Improve button touch targets */
+  button, a {
+    @apply touch-target;
+  }
+}
+
+/* Prevent body scroll when modal is open */
+.modal-open {
+  @apply overflow-hidden touch-none;
+}
+
+/* Safe area insets for modern mobile devices */
+@supports(padding: max(0px)) {
+  .safe-bottom {
+    padding-bottom: max(1rem, env(safe-area-inset-bottom));
+  }
+  
+  .safe-top {
+    padding-top: max(1rem, env(safe-area-inset-top));
+  }
+}
+
+/* Improved scrolling on mobile */
+.smooth-scroll {
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+
+/* Better tap highlights for mobile */
+.tap-highlight {
+  -webkit-tap-highlight-color: rgba(59, 130, 246, 0.5);
+}
+
+/* Prevent text size adjustment on orientation change */
+html {
+  -webkit-text-size-adjust: 100%;
+}
