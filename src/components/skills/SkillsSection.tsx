@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Terminal, Code, Bot, Server, Cloud, Database, Clock, ArrowRight, X } from 'lucide-react';
+import { Terminal, Code, Bot, Wrench, Cloud, Database, Clock, ArrowRight, X } from 'lucide-react';
 import SectionTransition from '../SectionTransition';
 
 const skills = [
@@ -13,220 +13,184 @@ const skills = [
     description: 'Experience with modern programming languages and web frameworks.',
     proficiency: 92,
     details: {
-      overview: 'Focused on web development with React and Python programming.',
-      experience: 'Academic projects and coursework',
       expertise: [
-        'Object-Oriented Programming',
-        'Functional Programming',
-        'Data Structures',
-        'Algorithm Design'
+        'Object-Oriented Design',
+        'Data Structures & Algorithms',
+        'Modular Architecture',
+        'Functional Programming'
       ],
       experience: [
-        'Multiple academic projects',
-        'Personal development projects',
-        'Open source contributions',
-        'Technical mentoring'
+        'Deployed full-stack SaaS apps',
+        'Open-source code contributions',
+        'Custom GPT agent pipelines'
       ],
       tools: [
-        'Python',
-        'JavaScript',
-        'TypeScript',
-        'Java',
-        'C++'
+        'Python', 'TypeScript', 'JavaScript', 'Java', 'C++'
       ],
       achievements: [
-        'Developed many full-stack applications',
-        'Created efficient algorithms',
-        'Optimized code performance',
-        'Implemented design patterns'
+        'Wrote production-grade backend logic',
+        'Built reusable frontend UI kits',
+        'Refactored legacy codebases'
       ]
     }
   },
   {
     icon: Bot,
     title: 'AI & Automation',
-    items: ['OpenAI', 'Make.com', 'Voiceflow'],
+    items: ['OpenAI', 'LangChain', 'Make.com'],
     color: 'text-cyan-400',
     gradient: 'from-cyan-500/20 to-green-500/20',
     description: 'Building AI solutions and automation systems.',
     proficiency: 83,
     details: {
       expertise: [
-        'AI Integration',
-        'Process Automation',
-        'Natural Language Processing',
-        'Machine Learning'
+        'GPT Agent Architectures',
+        'Function Calling & Memory',
+        'Process & Workflow Automation',
+        'Natural Language Interfaces'
       ],
       experience: [
-        'Custom AI solutions',
-        'Chatbot development',
-        'Workflow automation',
-        'Data analysis'
+        'Built DevBot execution kernel',
+        'Automated video-content pipelines',
+        'Developed AI tools for clients'
       ],
       tools: [
-        'OpenAI API',
-        'Make.com',
-        'Voiceflow',
-        'Phantombuster',
-        'Python ML libraries'
+        'OpenAI API', 'LangChain', 'Make.com',
+        'PhantomBuster', 'Python', 'Supabase Functions'
       ],
       achievements: [
-        'Automated business processes',
-        'Developed AI chatbots',
-        'Improved efficiency by 70%',
-        'Reduced manual work'
+        'Reduced manual tasks by 80%',
+        'Automated full business operations',
+        'Launched monetized AI services'
       ]
     }
   },
   {
     icon: Database,
     title: 'Database & Backend',
-    items: ['SQL', 'Node.js', 'Express'],
+    items: ['PostgreSQL', 'Node.js', 'Express'],
     color: 'text-orange-400',
     gradient: 'from-orange-500/20 to-red-500/20',
     description: 'Database design and backend development.',
     proficiency: 86,
     details: {
       expertise: [
-        'Database Design',
-        'Query Optimization',
-        'Data Modeling',
-        'Performance Tuning'
+        'SQL Query Optimization',
+        'Schema Design & Indexing',
+        'Role-based Auth & Access',
+        'Live API Integration'
       ],
       experience: [
-        'SQL databases',
-        'NoSQL databases',
-        'Data migration',
-        'Schema design'
+        'Built Supabase-backed memory DB',
+        'Auth-managed multi-user backends',
+        'Rendered endpoints for AI agents'
       ],
       tools: [
-        'PostgreSQL',
-        'MongoDB',
-        'MySQL',
-        'Redis',
-        'Supabase',
-        'Firebase'
+        'PostgreSQL', 'Supabase', 'MongoDB',
+        'Node.js', 'Express', 'Redis'
       ],
       achievements: [
-        'Optimized database performance',
-        'Designed efficient schemas',
-        'Implemented data security',
-        'Managed large datasets'
+        'Handled live data for 1000+ entries',
+        'Secured APIs with row-level access',
+        'Built GraphQL-style federation system'
       ]
     }
   },
   {
     icon: Terminal,
     title: 'Web Development',
-    items: ['React', 'Tailwind CSS', 'TypeScript'],
+    items: ['React', 'Next.js', 'Tailwind CSS'],
     color: 'text-blue-400',
     gradient: 'from-blue-500/20 to-indigo-500/20',
     description: 'Modern frontend development with React.',
     proficiency: 89,
     details: {
       expertise: [
-        'Frontend Development',
-        'Responsive Design',
-        'State Management',
-        'Performance Optimization'
+        'Component-based Architecture',
+        'Responsive UI Systems',
+        'Context & State Management',
+        'Framer Motion Animation'
       ],
       experience: [
-        'Portfolio websites',
-        'E-commerce platforms',
-        'Web applications',
-        'Progressive Web Apps'
+        'Built client-facing dashboards',
+        'Portfolio + QR-linked resume UI',
+        'Admin panels for automation tools'
       ],
       tools: [
-        'React',
-        'Tailwind CSS',
-        'Next.js',
-        'TypeScript',
-        'Framer Motion',
-        'Redux'
+        'React', 'Next.js 14', 'Tailwind CSS',
+        'Framer Motion', 'ShadCN/UI', 'Vite'
       ],
       achievements: [
-        'Built responsive websites',
-        'Improved load times by 50%',
-        'Enhanced user experience',
-        'Implemented modern UI/UX'
+        'Increased usability across devices',
+        'Reduced bounce rate 30%',
+        'Dynamic forms + resume previewers'
       ]
     }
   },
   {
-    icon: Terminal,
+    icon: Wrench,
     title: 'Development Tools',
-    items: ['Git', 'VS Code', 'Command Line'],
+    items: ['Git', 'VS Code', 'Docker'],
     color: 'text-green-400',
     gradient: 'from-green-500/20 to-teal-500/20',
     description: 'Proficient with development tools and environments.',
     proficiency: 82,
     details: {
       expertise: [
-        'Version Control',
-        'Development Workflows',
-        'Code Quality',
-        'Testing'
+        'CI/CD Pipelines',
+        'Version Control Workflows',
+        'Local Dev Environments',
+        'Code Quality Standards'
       ],
       experience: [
-        'Team collaboration',
-        'Code review',
-        'CI/CD pipelines',
-        'Documentation'
+        'Integrated GitHub Actions',
+        'VS Code + extensions config',
+        'Containerized with Docker'
       ],
       tools: [
-        'VS Code',
-        'Git',
-        'GitHub',
-        'Terminal',
-        'npm/yarn',
-        'Docker'
+        'Git', 'GitHub', 'Docker',
+        'VS Code', 'NPM/Yarn', 'CLI Tools'
       ],
       achievements: [
-        'Streamlined workflows',
-        'Improved team productivity',
-        'Enhanced code quality',
-        'Automated testing'
+        'Automated build & deploy cycle',
+        'Improved code review flow',
+        'Hardened agent safety protocols'
       ]
     }
   },
   {
     icon: Cloud,
     title: 'Deployment',
-    items: ['Netlify', 'GitHub Pages', 'DNS'],
+    items: ['Netlify', 'Render', 'GitHub Pages'],
     color: 'text-indigo-400',
     gradient: 'from-indigo-500/20 to-purple-500/20',
     description: 'Web deployment and hosting configuration.',
     proficiency: 91,
     details: {
       expertise: [
-        'Cloud Deployment',
-        'Server Configuration',
-        'Domain Management',
-        'SSL/Security'
+        'Multi-env Hosting Config',
+        'CDN Optimization',
+        'CI/CD Auto Deployments',
+        'DNS + SSL Integration'
       ],
       experience: [
-        'Web hosting',
-        'Cloud services',
-        'Continuous deployment',
-        'Server maintenance'
+        'Hosted dynamic portfolio on Netlify',
+        'Deployed DevBot on Render',
+        'Managed SSL & DNS configs'
       ],
       tools: [
-        'Netlify',
-        'Vercel',
-        'AWS',
-        'Digital Ocean',
-        'Cloudflare',
-        'GitHub Actions'
+        'Render', 'Netlify', 'Cloudflare',
+        'GitHub Pages', 'Vercel', 'DNS tools'
       ],
       achievements: [
-        'Automated deployments',
-        'Improved uptime',
-        'Enhanced security',
-        'Optimized performance'
+        'Cut deploy time by 75%',
+        'Resolved domain issues live',
+        'Linked QR deploy to resume'
       ]
     }
   }
 ];
+
 
 function SkillModal({ skill, onClose }: { skill: typeof skills[0]; onClose: () => void }) {
   const Icon = skill.icon;

@@ -1,59 +1,81 @@
-import { Bot, Briefcase, GraduationCap, Award, Code } from 'lucide-react';
+import { Bot, Briefcase, GraduationCap, MonitorSmartphone, Trophy, UserCog, BookOpen } from 'lucide-react';
 
 export const timelineItems = [
   {
     icon: Bot,
     title: "ACS Results AI Launch",
     date: "December 2024",
-    description: "Founded innovative AI automation agency",
+    description: "Founded AI automation agency with full-stack systems",
     achievements: [
-      "Developed custom AI solutions for businesses",
-      "Implemented advanced automation systems",
-      "Created scalable business optimization tools"
+      "Built multi-agent orchestration pipelines",
+      "Deployed AI SaaS using FastAPI + Supabase",
+      "Automated backend dev with GPT-4o"
     ]
   },
   {
     icon: Briefcase,
-    title: "Portfolio Development",
-    date: "November 2024 - Present",
-    description: "Leading portfolio website development at ACS Results",
+    title: "Team Lead – Portfolio Systems",
+    date: "July 2024 – Nov 2024",
+    description: "Led portfolio site development for clients",
     achievements: [
-      "Built 10+ professional portfolios",
-      "Managed development team",
-      "Implemented modern web technologies"
+      "Managed 4-person development team",
+      "Shipped 10+ client websites",
+      "Standardized reusable frontend templates"
+    ]
+  },
+  {
+    icon: MonitorSmartphone,
+    title: "Automation Dev – Red Rose Digital",
+    date: "April 2025 – Present",
+    description: "Built AI-powered agency platforms for marketing",
+    achievements: [
+      "Automated video-to-post pipelines",
+      "Integrated Zapier, intake, distribution",
+      "Scaled agency client delivery"
+    ]
+  },
+  {
+    icon: UserCog,
+    title: "Freelance AI Builder",
+    date: "Sep 2024 – Mar 2025",
+    description: "Created GPT tools for small businesses",
+    achievements: [
+      "Built auto-reply + parsing agents",
+      "Used FastAPI, Tailwind, OpenAI",
+      "Deployed 5+ internal AI tools"
     ]
   },
   {
     icon: GraduationCap,
-    title: "Thaddeus Stevens College of Technology",
-    date: "August 2024 - Present",
-    description: "Computer Software Engineering Major with 4.0 GPA",
+    title: "Thaddeus Stevens College",
+    date: "Aug 2024 – Present",
+    description: "Software Engineering | 4.0 GPA",
     achievements: [
-      "Student Government Association Member",
-      "Advanced Web Development Projects",
-      "Database Design Excellence"
+      "Dean’s List, SGA Member",
+      "Excelled in backend + database",
+      "Built advanced web projects"
     ]
   },
   {
-    icon: Award,
-    title: "Coding Competition Success",
+    icon: Trophy,
+    title: "Coding Competition Wins",
     date: "2024",
-    description: "Multiple achievements in competitive programming",
+    description: "Placed across multiple universities",
     achievements: [
-      "West Chester University – 2nd Place",
-      "Bloomsburg University – 3rd Place",
+      "West Chester – 2nd Place",
+      "Bloomsburg – 3rd Place",
       "HACC – 2nd Place"
     ]
   },
   {
-    icon: Code,
-    title: "Python Teaching Experience",
-    date: "2023 - 2024",
-    description: "Teaching Python fundamentals at Conrad Weiser",
+    icon: BookOpen,
+    title: "Python Teacher – Conrad Weiser",
+    date: "Dec 2023 – Jun 2024",
+    description: "Taught beginner Python fundamentals",
     achievements: [
-      "Developed comprehensive curriculum",
-      "Mentored students in programming",
-      "Enhanced teaching and communication skills"
+      "Wrote intro Python curriculum",
+      "Led student coding workshops",
+      "Mentored 10+ new programmers"
     ]
   }
 ];
