@@ -11,12 +11,12 @@ const achievements = [
     gradient: 'from-yellow-500/20 to-orange-500/20',
     details: {
       title: 'Academic Excellence',
-      description: 'Maintaining a perfect 4.0 GPA while pursuing Software Engineering at Thaddeus Stevens College of Technology.',
+      description: 'Maintained a 4.0 GPA while completing advanced software engineering coursework at Thaddeus Stevens College of Technology.',
       highlights: [
-        'Dean\'s List Recognition',
-        'Advanced Programming Courses',
-        'Software Development Projects',
-        'Database Management Systems'
+        'Dean’s List Honors',
+        'Data Structures & Algorithms',
+        'Full-Stack Dev Projects',
+        'Systems Design Foundations'
       ]
     }
   },
@@ -27,11 +27,11 @@ const achievements = [
     gradient: 'from-green-500/20 to-cyan-500/20',
     details: {
       title: 'Competition Success',
-      description: 'Achieved multiple victories in regional coding competitions, demonstrating problem-solving skills and technical expertise.',
+      description: 'Placed across multiple regional collegiate competitions, solving real-time algorithmic and system design challenges.',
       highlights: [
         'TSCT – 2nd Place',
-        'West Chester University – 2nd Place',
-        'Bloomsburg University – 3rd Place',
+        'West Chester – 2nd Place',
+        'Bloomsburg – 3rd Place',
         'HACC – 2nd Place'
       ]
     }
@@ -43,12 +43,12 @@ const achievements = [
     gradient: 'from-blue-500/20 to-purple-500/20',
     details: {
       title: 'Leadership & Service',
-      description: 'Active member of the Student Government Association, contributing to campus initiatives and student advocacy.',
+      description: 'Led campus initiatives as an active member of the Student Government Association, driving events and policy input.',
       highlights: [
-        'Student Representative',
-        'Event Organization',
-        'Policy Development',
-        'Community Engagement'
+        'SGA Representative',
+        'Event Chair',
+        'Campus Engagement',
+        'Policy Collaboration'
       ]
     }
   }

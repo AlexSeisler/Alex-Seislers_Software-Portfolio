@@ -13,12 +13,12 @@ const features = [
   { 
     icon: Bot,
     text: "AI Solutions",
-    description: "OpenAI, Custom Solutions"
+    description: "OpenAI, LangChain, Agents"
   },
   { 
     icon: Zap,
-    text: "Process Automation",
-    description: "Business Optimization"
+    text: "Workflow Automation",
+    description: "Business Optimization, CI/CD"
   }
 ];
 
@@ -142,8 +142,7 @@ export default function Header() {
               className="text-lg sm:text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto leading-relaxed px-4"
               variants={itemVariants}
             >
-              Crafting innovative solutions at the intersection of software engineering 
-              and artificial intelligence. Building the future, one line of code at a time.
+              Crafting intelligent systems at the intersection of AI and software engineering. From autonomous agents to full-stack platforms, I build the future one line of code at a time.
             </motion.p>
           </motion.div>
 

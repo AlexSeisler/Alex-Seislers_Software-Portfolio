@@ -40,11 +40,7 @@ export default function IntroContent() {
           viewport={{ once: true }}
           transition={{ delay: 0.3 }}
         >
-          I'm a software engineer at Thaddeus Stevens College of Technology, focused on building 
-          robust and scalable solutions. With a strong foundation in software development and 
-          artificial intelligence, I create practical applications that solve real-world problems. 
-          My approach combines technical expertise with strategic thinking to deliver efficient 
-          and innovative solutions.
+          I build scalable AI systems that solve business problems. From data pipelines to backend APIs to autonomous agents. With a foundation in software engineering and a focus on execution, I turn complex workflows into clean, production-ready tools.
         </motion.p>
       </div>
     </motion.div>

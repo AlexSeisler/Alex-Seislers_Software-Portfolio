@@ -7,45 +7,45 @@ const specializations = [
   {
     icon: Code,
     label: 'Full-Stack Development',
-    description: 'Python, Java, JavaScript, HTML, CSS',
+    description: 'Python, JavaScript, FastAPI, React',
     gradient: 'from-blue-600/10 to-indigo-600/10',
     details: {
-      skills: ['Python', 'Java', 'JavaScript', 'HTML', 'CSS', 'React', 'Node.js', 'TypeScript'],
-      projects: ['ACS Results AI', 'Portfolio Website', 'E-commerce Platform'],
-      experience: '4+ years of development experience'
+      skills: ['Python', 'Java', 'JavaScript', 'FastAPI', 'Tailwind CSS', 'React', 'Node.js', 'TypeScript'],
+      projects: ['ACS Results AI', 'CIAN Orchestration System', 'Portfolio Platform'],
+      experience: 'Full-stack backend & frontend experience'
     }
   },
   {
     icon: Bot,
     label: 'AI Solutions',
-    description: 'OpenAI, Custom Solutions',
+    description: 'OpenAI, LangChain, Agents',
     gradient: 'from-indigo-600/10 to-purple-600/10',
     details: {
-      skills: ['OpenAI API', 'Machine Learning', 'Natural Language Processing', 'Custom AI Integration'],
-      projects: ['Chatbot Development', 'AI Automation Systems', 'Predictive Analytics'],
+      skills: ['LangChain', 'Secure Auth Flows', 'Function Calling', 'Autonomous Agents', 'Task Queues', 'Vector DBs'],
+      projects: ['CIAN Agent OS', 'SMMAA Automation Stack', 'DevBot Execution Kernel'],
       experience: 'Specialized in business AI solutions'
     }
   },
   {
     icon: Database,
-    label: 'Database Design',
-    description: 'SQL, NoSQL experience',
+    label: 'Data Infrastructure',
+    description: 'PostgreSQL, SQL, pgvector',
     gradient: 'from-purple-600/10 to-blue-600/10',
     details: {
-      skills: ['SQL', 'MongoDB', 'Database Optimization', 'Data Modeling'],
-      projects: ['CRM Systems', 'Analytics Platforms', 'Data Warehousing'],
-      experience: 'Advanced database architecture experience'
+      skills: ['PostgreSQL', 'Supabase', 'pgvector', 'Secrets Management', 'Cloud-Ready Deployments', 'Schema Contracts'],
+      projects: ['Federation Memory Graph', 'CIAN Memory Engine', 'Analytics Logging Pipelines'],
+      experience: 'Production-grade data architecture'
     }
   },
   {
     icon: Globe,
     label: 'Web Development',
-    description: 'Modern frameworks & tools',
+    description: 'TypeScript, Next.js 14, Tailwind',
     gradient: 'from-blue-600/10 to-indigo-600/10',
     details: {
-      skills: ['React', 'Next.js', 'Tailwind CSS', 'Responsive Design'],
-      projects: ['Corporate Websites', 'Web Applications', 'E-commerce Solutions'],
-      experience: 'Full-stack web development specialist'
+      skills: ['TypeScript','Next.js 14', 'React', 'Tailwind CSS', 'Component Systems', 'Responsive Design'],
+      projects: ['Portfolio Interface', 'CIAN Dashboard UI', 'Client-Facing Frontends'],
+      experience: 'Modern frontend interface builds'
     }
   }
 ];
