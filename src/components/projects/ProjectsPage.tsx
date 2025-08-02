@@ -5,7 +5,7 @@ import { projectsData } from '../../data/projects';
 import ProjectGrid from './ProjectGrid';
 import ProjectModal from './ProjectModal';
 
-type Category = 'all' | 'AI Solutions' | 'Web Development' | 'School Codes';
+type Category = 'all' | 'ACS Results AI: Trifecta' | 'AI Automation Agency' | 'ACS Results Legacy' | 'Extra Projects';
 
 export default function ProjectsPage() {
   const [selectedProject, setSelectedProject] = useState<number | null>(null);
@@ -23,28 +23,34 @@ export default function ProjectsPage() {
 
   const categories: { value: Category; icon: any; count: number; gradient: string }[] = [
     { 
-      value: 'all', 
-      icon: Briefcase, 
+      value: 'all',
+      icon: Briefcase,
       count: projectsData.length,
       gradient: 'from-blue-500/20 to-purple-500/20'
     },
     { 
-      value: 'AI Solutions', 
-      icon: Bot, 
-      count: projectsData.filter(p => p.category === 'AI & Automation').length,
+      value: 'ACS Results AI: Trifecta',
+      icon: Bot,
+      count: projectsData.filter(p => p.category === 'ACS Results AI: Trifecta').length,
       gradient: 'from-cyan-500/20 to-blue-500/20'
     },
     { 
-      value: 'Web Development', 
-      icon: Globe, 
-      count: projectsData.filter(p => p.category === 'Web Development').length,
-      gradient: 'from-purple-500/20 to-pink-500/20'
+      value: 'AI Automation Agency',
+      icon: Globe,
+      count: projectsData.filter(p => p.category === 'AI Automation Agency').length,
+      gradient: 'from-indigo-500/20 to-sky-500/20'
+    },
+    { 
+      value: 'ACS Results Legacy',
+      icon: Code,
+      count: projectsData.filter(p => p.category === 'ACS Results Legacy').length,
+      gradient: 'from-yellow-400/20 to-amber-500/20'
     },
     {
-      value: 'School Codes',
+      value: 'Extra Projects',
       icon: GraduationCap,
-      count: projectsData.filter(p => p.category === 'School Codes').length,
-      gradient: 'from-green-500/20 to-emerald-500/20'
+      count: projectsData.filter(p => p.category === 'Extra Projects').length,
+      gradient: 'from-emerald-500/20 to-teal-500/20'
     }
   ];
 
@@ -53,9 +59,7 @@ export default function ProjectsPage() {
                          project.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          project.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
     
-    const matchesCategory = selectedCategory === 'all' || 
-                          (selectedCategory === 'AI Solutions' && project.category === 'AI & Automation') ||
-                          project.category === selectedCategory;
+    const matchesCategory = selectedCategory === 'all' || project.category.includes(selectedCategory);
     
     return matchesSearch && matchesCategory;
   });
