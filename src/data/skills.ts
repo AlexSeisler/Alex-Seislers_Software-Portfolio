@@ -153,7 +153,7 @@ export const skillsData = [
       ],
       tools: [
         'Node.js',
-        'Express',
+        'FastAPI',
         'PostgreSQL',
         'MongoDB'
       ],
@@ -185,9 +185,7 @@ export const skillsData = [
       ],
       tools: [
         'PostgreSQL',
-        'MongoDB',
         'MySQL',
-        'Redis',
         'Supabase'
       ],
       achievements: [
@@ -220,7 +218,6 @@ export const skillsData = [
         'Netlify',
         'Vercel',
         'AWS',
-        'Digital Ocean',
         'GitHub Actions'
       ],
       achievements: [
@@ -236,21 +233,22 @@ export const skillsData = [
 export const tools = [
   {
     category: 'Development Environments',
-    items: ['VS Code', 'Git', 'Terminal', 'npm']
+    items: ['VS Code', 'Git', 'Terminal', 'Postman']
   },
   {
     category: 'Languages & Frameworks',
-    items: ['Python', 'JavaScript', 'Java', 'TypeScript']
+    items: ['TypeScript', 'Python', 'FastAPI', 'React']
   },
   {
     category: 'AI & Automation',
-    items: ['OpenAI', 'Make.com', 'Voiceflow', 'Phantombuster']
+    items: ['OpenAI', 'Make.com', 'Voiceflow', 'Vapi']
   },
   {
     category: 'Platforms & Infrastructure',
-    items: ['Netlify', 'Supabase', 'GitHub', 'Vercel']
+    items: ['Supabase', 'GitHub', 'Render', 'Vercel']
   }
 ];
+
 
 export const certifications = [
   {

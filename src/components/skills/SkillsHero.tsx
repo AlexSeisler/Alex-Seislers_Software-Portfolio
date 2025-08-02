@@ -6,7 +6,7 @@ const highlights = [
   {
     icon: Code,
     label: 'Full-Stack Development',
-    description: 'Building complete web applications',
+    description: 'Building production SaaS applications',
     gradient: 'from-blue-500/20 to-purple-500/20'
   },
   {
