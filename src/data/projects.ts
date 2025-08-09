@@ -25,7 +25,6 @@ export const projectsData: ProjectType[] = [
     "Fully autonomous DevOps agent",
     "Rapid backend delivery via safe patch cycles"
   ],
-  liveUrl: "https://chatgpt.com/g/g-687adb918ce88191977866be9e2153c7-devbot",
   githubUrl: "https://github.com/AlexSeisler/DevbotKernelBackend"
 },
   {
@@ -41,7 +40,6 @@ export const projectsData: ProjectType[] = [
     skills: ["Data Layer Design", "API Orchestration", "Execution Queues"],
     challenges: ["Memory Cohesion", "Multi-agent Sync"],
     outcomes: ["Operational Clarity", "Modular Architecture"],
-    liveUrl: "https://chatgpt.com/g/g-6882d194246c8191a7b8974df4419c8d-cian-v0",
     githubUrl: "https://github.com/AlexSeisler/DevbotKernelBackend"
   },
   {
