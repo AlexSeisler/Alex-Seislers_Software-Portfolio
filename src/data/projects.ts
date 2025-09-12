@@ -116,7 +116,8 @@ export const projectsData: ProjectType[] = [
     skills: ["AI Development", "CRM Integration", "Automation Engineering"],
     challenges: ["System Personalization", "Tool Compatibility"],
     outcomes: ["Efficiency Gains", "Owner Offload"],
-    liveUrl: "https://acs-results-ai.netlify.app/",
+    liveUrl: "https://acsresultsai-aaa.netlify.app/",
+    githubUrl: "https://github.com/AlexSeisler/ACSResultsAI"
   },
   {
     id: 7,
