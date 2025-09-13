@@ -176,7 +176,8 @@ export const projectsData: ProjectType[] = [
     skills: ["Frontend", "Tailwind", "UI Systems"],
     challenges: ["User Customization", "Deployment Flow"],
     outcomes: ["Launched Websites", "UX Simplicity"],
-    liveUrl: "https://acs-results.netlify.app/"
+    liveUrl: "https://acs-results.netlify.app/",
+    githubUrl: "https://github.com/AlexSeisler/ACS-Results"
   },
   {
     id: 11,
@@ -205,7 +206,9 @@ export const projectsData: ProjectType[] = [
     duration: "2 months",
     skills: ["Web Systems", "Civic Design"],
     challenges: ["Historic Accuracy", "Community UX"],
-    outcomes: ["Public Engagement", "Historic Timeline"]
+    outcomes: ["Public Engagement", "Historic Timeline"],
+    liveUrl: "https://columbiapa300.netlify.app/",
+    githubUrl: "https://github.com/AlexSeisler/ColumbiaPA300"
   },
   {
     id: 13,
@@ -220,7 +223,8 @@ export const projectsData: ProjectType[] = [
     skills: ["Frontend Dev", "OpenAI APIs"],
     challenges: ["Voice UX", "Narrative Design"],
     outcomes: ["Creative Engagement", "Educational Value"],
-    liveUrl: "https://rouge-storybook-world.netlify.app/",
+    liveUrl: "https://rougestorybookworld.netlify.app/",
+    githubUrl: "https://github.com/AlexSeisler/RougeStoryWorld"
   },
 
   // === Extra Projects ===
