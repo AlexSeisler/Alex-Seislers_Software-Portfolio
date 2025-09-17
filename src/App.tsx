@@ -12,6 +12,9 @@ import Contact from './components/Contact';
 import ProjectsPage from './components/projects/ProjectsPage';
 import SkillsPage from './pages/SkillsPage';
 import ContactPage from './pages/ContactPage';
+import CaseStudyPage from './pages/case-study/CaseStudyPage';
+import FloatingCTA from './components/common/FloatingCTA';
+import VideoSidebar from './components/home/VideoSidebar';
 
 export default function App() {
   const { scrollYProgress } = useScroll();
@@ -25,6 +28,7 @@ export default function App() {
     <Router>
       <ScrollToTop />
       <MainNav />
+      <FloatingCTA />
       
       {/* Progress bar */}
       <motion.div
@@ -35,6 +39,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={
           <main className="bg-[#0A0F1C]">
+            <VideoSidebar />
             <Header />
             <AboutSection />
             <Timeline />
@@ -44,6 +49,7 @@ export default function App() {
           </main>
         } />
         <Route path="/projects" element={<ProjectsPage />} />
+        <Route path="/case-study/:id" element={<CaseStudyPage />} />
         <Route path="/skills" element={<SkillsPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="*" element={<Navigate to="/" replace />} />

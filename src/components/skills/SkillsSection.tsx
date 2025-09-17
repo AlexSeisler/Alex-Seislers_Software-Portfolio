@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { Terminal, Code, Bot, Wrench, Cloud, Database, Clock, ArrowRight, X } from 'lucide-react';
 import SectionTransition from '../SectionTransition';
 
@@ -389,6 +390,16 @@ export default function SkillsSection() {
                   group-hover:text-cyan-400 transition-colors">
                   <Clock className="w-4 h-4" />
                   <span className="text-sm">Click to explore</span>
+                </div>
+
+                {/* Related Projects */}
+                <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
+                  <Link
+                    to="/projects"
+                    className="text-xs text-blue-400 hover:text-blue-300 transition-colors"
+                  >
+                    View projects →
+                  </Link>
                 </div>
 
                 <div className={`absolute inset-0 bg-gradient-to-br ${skill.gradient} opacity-0 

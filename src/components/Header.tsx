@@ -3,6 +3,7 @@ import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
 import { ChevronDown, FolderOpen, Phone, Code, Bot, Zap, ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import ResumeButton from './common/ResumeButton';
+import ProjectPreviewStrip from './home/ProjectPreviewStrip';
 
 const features = [
   { 
@@ -176,10 +177,43 @@ export default function Header() {
             className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center px-4"
             variants={containerVariants}
           >
+            <motion.div
+              animate={{
+                boxShadow: [
+                  '0 0 0 0 rgba(59, 130, 246, 0)',
+                  '0 0 0 8px rgba(59, 130, 246, 0.1)',
+                  '0 0 0 0 rgba(59, 130, 246, 0)'
+                ]
+              }}
+              transition={{
+                duration: 3,
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
+              className="rounded-lg"
+            >
+              <Link 
+                to="/projects"
+                className="group relative w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 
+                  text-white rounded-lg overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300"
+              >
+                <motion.span 
+                  className="relative z-10 flex items-center justify-center gap-2 font-semibold"
+                  whileHover={{ x: 5 }}
+                >
+                  <FolderOpen className="w-5 h-5" />
+                  View Projects
+                </motion.span>
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-700 to-purple-700 transform scale-x-0 
+                  group-hover:scale-x-100 transition-transform origin-left duration-300" />
+              </Link>
+            </motion.div>
+
             <Link 
               to="/projects"
-              className="group relative w-full sm:w-auto px-8 py-4 bg-blue-600 text-white rounded-lg 
-                overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300"
+              className="group relative w-full sm:w-auto px-8 py-4 bg-transparent border-2 
+                border-gray-700 text-white rounded-lg overflow-hidden hover:border-blue-500/50 
+                transition-all duration-300 hidden"
             >
               <motion.span 
                 className="relative z-10 flex items-center justify-center gap-2"
@@ -188,7 +222,7 @@ export default function Header() {
                 <FolderOpen className="w-5 h-5" />
                 View Projects
               </motion.span>
-              <div className="absolute inset-0 bg-blue-700 transform scale-x-0 
+              <div className="absolute inset-0 bg-gray-800 transform scale-x-0 
                 group-hover:scale-x-100 transition-transform origin-left duration-300" />
             </Link>
 
@@ -213,6 +247,9 @@ export default function Header() {
                 group-hover:scale-x-100 transition-transform origin-left duration-300" />
             </Link>
           </motion.div>
+
+          {/* Project Preview Strip */}
+          <ProjectPreviewStrip />
         </div>
       </motion.div>
 

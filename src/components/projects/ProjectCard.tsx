@@ -113,11 +113,11 @@ export default function ProjectCard({ project, onClick }: ProjectCardProps) {
             <div className="flex items-center gap-4">
               <div className="flex items-center gap-1.5 text-gray-400">
                 <Calendar className="w-4 h-4" />
-                <span>{project.date}</span>
+                className="flex items-center gap-1.5 text-blue-400 hover:text-blue-300 transition-colors group/btn"
               </div>
               <div className="flex items-center gap-1.5 text-gray-400">
-                <Clock className="w-4 h-4" />
-                <span>{project.duration}</span>
+                <span className="text-sm">Case Study</span>
+                <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
               </div>
             </div>
             <motion.button

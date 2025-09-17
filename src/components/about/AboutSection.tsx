@@ -5,6 +5,7 @@ import IntroContent from './IntroContent';
 import Achievements from './Achievements';
 import ServiceTags from './ServiceTags';
 import CallToAction from './CallToAction';
+import FeaturedWorkSnapshot from '../home/FeaturedWorkSnapshot';
 
 export default function AboutSection() {
   return (
@@ -36,6 +37,7 @@ export default function AboutSection() {
             <IntroContent />
             <Achievements />
             <ServiceTags />
+            <FeaturedWorkSnapshot />
             <CallToAction />
           </motion.div>
         </div>

@@ -3,7 +3,9 @@ import { motion, AnimatePresence, useScroll, useSpring } from 'framer-motion';
 import { Search, X, Code, Bot, Globe, Briefcase, Sparkles, GraduationCap } from 'lucide-react';
 import { projectsData } from '../data/projects';
 import ProjectGrid from '../components/projects/ProjectGrid';
+import ProjectsHero from '../components/projects/ProjectsHero';
 import ProjectModal from '../components/projects/ProjectModal';
+import VideoSidebar from '../components/home/VideoSidebar';
 
 type Category = 'all' | 'ACS Results AI: Trifecta' | 'AI Automation Agency' | 'ACS Results Legacy' | 'Extra Projects';
 
@@ -73,6 +75,8 @@ export default function ProjectsPage() {
 
   return (
     <div className="min-h-screen bg-[#0A0F1C] relative">
+      <VideoSidebar />
+      
       {/* Animated Background Pattern */}
       <div className="fixed inset-0 pointer-events-none">
         {/* Circuit board pattern */}
@@ -171,49 +175,16 @@ export default function ProjectsPage() {
       </motion.div>
 
       <div className="container mx-auto px-4 py-12 relative z-10">
-        {/* Enhanced Page Title */}
-        <motion.div
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-        >
-          <motion.div
-            className="inline-flex items-center gap-2 px-6 py-2 rounded-full bg-gradient-to-r 
-              from-blue-500/10 to-purple-500/10 border border-blue-500/20 backdrop-blur-sm mb-6"
-            whileHover={{ scale: 1.05 }}
-          >
-            <motion.div
-              animate={{ rotate: 360 }}
-              transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
-            >
-              <Sparkles className="w-5 h-5 text-blue-400" />
-            </motion.div>
-            <span className="text-blue-400 font-medium">Project Showcase</span>
-          </motion.div>
-
-          <motion.h1 
-            className="text-5xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-white 
-              bg-clip-text text-transparent"
-            animate={{ backgroundPosition: ['0%', '100%', '0%'] }}
-            transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
-            style={{ backgroundSize: '200% auto' }}
-          >
-            Featured Projects
-          </motion.h1>
-
-          <motion.p 
-            className="text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-          >
-            Explore my collection of software development projects, showcasing practical applications 
-            of programming skills and innovative solutions.
-          </motion.p>
-        </motion.div>
+        {/* Hero Section with Flagship Projects */}
+        <ProjectsHero />
 
         {/* Categories */}
-        <div className="mb-12">
+        <div className="mb-12 pt-8 border-t border-gray-800">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl font-bold text-white mb-2">Supporting Projects</h2>
+            <p className="text-gray-400">Additional work showcasing diverse technical skills</p>
+          </div>
+          
           <motion.div 
             className="flex flex-wrap justify-center gap-4"
             initial={{ opacity: 0, y: 20 }}
@@ -269,11 +240,13 @@ export default function ProjectsPage() {
           </motion.div>
         </div>
 
-        {/* Projects Grid */}
-        <ProjectGrid
-          projects={filteredProjects}
-          onProjectSelect={(id) => setSelectedProject(id)}
-        />
+        {/* Supporting Projects Grid */}
+        <div>
+          <ProjectGrid
+            projects={filteredProjects.filter(p => ![2, 12].includes(p.id))}
+            onProjectSelect={(id) => setSelectedProject(id)}
+          />
+        </div>
 
         {/* No Results Message */}
         <AnimatePresence>

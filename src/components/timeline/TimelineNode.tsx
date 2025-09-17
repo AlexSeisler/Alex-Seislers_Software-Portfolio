@@ -1,5 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 import { DivideIcon as LucideIcon } from 'lucide-react';
 
 interface TimelineNodeProps {
@@ -24,6 +26,16 @@ export default function TimelineNode({
   onHover,
 }: TimelineNodeProps) {
   const isLeft = index % 2 === 0;
+  
+  // Map timeline items to related projects
+  const getRelatedProject = (title: string) => {
+    if (title.includes('ACS Results AI')) return { id: 2, name: 'AI Dev Federation Dashboard' };
+    if (title.includes('Portfolio Systems')) return { id: 12, name: 'ColumbiaPA300' };
+    if (title.includes('Automation Dev')) return { id: 6, name: 'AI Automation Agency' };
+    return null;
+  };
+  
+  const relatedProject = getRelatedProject(title);
 
   return (
     <motion.div
@@ -96,6 +108,24 @@ export default function TimelineNode({
                 </motion.div>
               ))}
             </motion.div>
+            
+            {/* Related Project Link */}
+            {relatedProject && (
+              <motion.div
+                className="mt-4 pt-4 border-t border-gray-700/50"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: isActive ? 1 : 0 }}
+                transition={{ delay: 0.3 }}
+              >
+                <Link
+                  to={`/case-study/${relatedProject.id}`}
+                  className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors text-sm"
+                >
+                  <span>See related project: {relatedProject.name}</span>
+                  <ArrowRight className="w-3 h-3" />
+                </Link>
+              </motion.div>
+            )}
           </div>
         </div>
       </motion.div>
