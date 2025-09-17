@@ -13,6 +13,7 @@ import ProjectsPage from './components/projects/ProjectsPage';
 import SkillsPage from './pages/SkillsPage';
 import ContactPage from './pages/ContactPage';
 import CaseStudyPage from './pages/case-study/CaseStudyPage';
+import CaseStudiesPage from './pages/CaseStudiesPage';
 import FloatingCTA from './components/common/FloatingCTA';
 import VideoSidebar from './components/home/VideoSidebar';
 
@@ -50,6 +51,7 @@ export default function App() {
         } />
         <Route path="/projects" element={<ProjectsPage />} />
         <Route path="/case-study/:id" element={<CaseStudyPage />} />
+        <Route path="/case-studies" element={<CaseStudiesPage />} />
         <Route path="/skills" element={<SkillsPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="*" element={<Navigate to="/" replace />} />

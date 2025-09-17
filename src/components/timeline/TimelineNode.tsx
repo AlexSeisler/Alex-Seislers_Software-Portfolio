@@ -119,7 +119,8 @@ export default function TimelineNode({
               >
                 <Link
                   to={`/case-study/${relatedProject.id}`}
-                  className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors text-sm"
+                  className="inline-flex items-center gap-2 px-3 py-1.5 bg-blue-500/10 text-blue-400 
+                    hover:text-blue-300 hover:bg-blue-500/20 rounded-lg transition-all text-sm font-medium"
                 >
                   <span>See related project: {relatedProject.name}</span>
                   <ArrowRight className="w-3 h-3" />

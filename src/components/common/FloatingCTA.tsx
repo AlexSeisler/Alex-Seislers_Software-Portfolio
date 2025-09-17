@@ -9,7 +9,7 @@ export default function FloatingCTA() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrolled = window.scrollY > 800;
+      const scrolled = window.scrollY > 600; // Show earlier
       setIsVisible(scrolled && !isDismissed);
     };
 
@@ -23,7 +23,7 @@ export default function FloatingCTA() {
     <AnimatePresence>
       {isVisible && (
         <motion.div
-          className="fixed bottom-8 right-8 z-40"
+          className="fixed bottom-6 right-6 z-40"
           initial={{ opacity: 0, scale: 0.8, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.8, y: 20 }}
@@ -32,8 +32,9 @@ export default function FloatingCTA() {
           <div className="relative">
             <Link
               to="/projects"
-              className="group flex items-center gap-3 px-6 py-4 bg-gradient-to-r from-blue-600 to-purple-600 
-                text-white rounded-full shadow-2xl hover:shadow-blue-500/25 transition-all duration-300"
+              className="group flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 
+                text-white rounded-full shadow-2xl hover:shadow-blue-500/25 transition-all duration-300
+                ring-2 ring-blue-500/20 hover:ring-blue-400/40"
             >
               <motion.div
                 className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full opacity-0 
@@ -42,29 +43,29 @@ export default function FloatingCTA() {
                   scale: [1, 1.05, 1],
                 }}
                 transition={{
-                  duration: 3,
+                  duration: 6,
                   repeat: Infinity,
                   ease: "easeInOut"
                 }}
               />
               
-              <span className="relative z-10 font-semibold">View Projects</span>
+              <span className="relative z-10 font-semibold text-sm">View Projects</span>
               <motion.div
                 className="relative z-10"
                 whileHover={{ x: 5 }}
               >
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-4 h-4" />
               </motion.div>
             </Link>
 
             <motion.button
-              onClick={() => setIsDismissed(true)}
-              className="absolute -top-2 -right-2 w-6 h-6 bg-gray-800 text-gray-400 rounded-full 
-                flex items-center justify-center hover:bg-gray-700 transition-colors"
+              onClick={() => setIsDismissed(true)} 
+              className="absolute -top-1 -right-1 w-5 h-5 bg-gray-800 text-gray-400 rounded-full 
+                flex items-center justify-center hover:bg-gray-700 transition-colors text-xs"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
-              <X className="w-3 h-3" />
+              <X className="w-2.5 h-2.5" />
             </motion.button>
           </div>
         </motion.div>

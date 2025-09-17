@@ -198,12 +198,12 @@ export default function Header() {
                   text-white rounded-lg overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300"
               >
                 <motion.span 
-                  className="relative z-10 flex items-center justify-center gap-2 font-semibold"
+                '0 0 0 12px rgba(59, 130, 246, 0.15)',
                   whileHover={{ x: 5 }}
                 >
                   <FolderOpen className="w-5 h-5" />
                   View Projects
-                </motion.span>
+              duration: 7,
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-700 to-purple-700 transform scale-x-0 
                   group-hover:scale-x-100 transition-transform origin-left duration-300" />
               </Link>
@@ -211,8 +211,9 @@ export default function Header() {
 
             <Link 
               to="/projects"
-              className="group relative w-full sm:w-auto px-8 py-4 bg-transparent border-2 
-                border-gray-700 text-white rounded-lg overflow-hidden hover:border-blue-500/50 
+              className="group relative w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 
+                text-white rounded-lg overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300
+                ring-2 ring-blue-500/20 hover:ring-blue-400/40"
                 transition-all duration-300 hidden"
             >
               <motion.span 

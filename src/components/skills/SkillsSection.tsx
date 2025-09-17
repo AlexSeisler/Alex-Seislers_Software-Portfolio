@@ -436,6 +436,23 @@ export default function SkillsSection() {
                     {skill.description}
                   </p>
 
+                  {/* Project Tags */}
+                  <div className="mb-4">
+                    <p className="text-xs text-gray-500 mb-2">Projects showcasing this skill:</p>
+                    <div className="flex flex-wrap gap-1">
+                      {getSkillProjects(skill.title).map((project, i) => (
+                        <Link
+                          key={i}
+                          to={`/case-study/${project.id}`}
+                          className="px-2 py-1 bg-blue-500/10 text-blue-400 rounded text-xs
+                            hover:bg-blue-500/20 transition-colors"
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          {project.name}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
                   <div className="mt-4 flex flex-wrap gap-2">
                     {skill.items.slice(0, 3).map((item, i) => (
                       <span
@@ -469,4 +486,37 @@ export default function SkillsSection() {
       </AnimatePresence>
     </section>
   );
+}
+
+// Helper function to map skills to projects
+function getSkillProjects(skillTitle: string) {
+  const projectMap: Record<string, Array<{id: number, name: string}>> = {
+    'Languages & Frameworks': [
+      { id: 2, name: 'AI Federation' },
+      { id: 12, name: 'ColumbiaPA300' }
+    ],
+    'AI & Automation': [
+      { id: 1, name: 'DevBot' },
+      { id: 3, name: 'SMMAA' },
+      { id: 2, name: 'AI Federation' }
+    ],
+    'Database & Backend': [
+      { id: 2, name: 'AI Federation' },
+      { id: 12, name: 'ColumbiaPA300' }
+    ],
+    'Web Development': [
+      { id: 12, name: 'ColumbiaPA300' },
+      { id: 10, name: 'ACS Results' }
+    ],
+    'Development Tools': [
+      { id: 2, name: 'AI Federation' },
+      { id: 6, name: 'ACS Results AI' }
+    ],
+    'Deployment': [
+      { id: 2, name: 'AI Federation' },
+      { id: 12, name: 'ColumbiaPA300' }
+    ]
+  };
+  
+  return projectMap[skillTitle] || [];
 }

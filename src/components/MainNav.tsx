@@ -33,6 +33,7 @@ export default function MainNav() {
   const navItems = [
     { path: '/', icon: <Home className="w-5 h-5" />, text: 'Home' },
     { path: '/projects', icon: <Briefcase className="w-5 h-5" />, text: 'Projects' },
+    { path: '/case-studies', icon: <Code className="w-5 h-5" />, text: 'Case Studies' },
     { path: '/skills', icon: <Code className="w-5 h-5" />, text: 'Skills' },
     { path: '/contact', icon: <Phone className="w-5 h-5" />, text: 'Contact' },
   ];
