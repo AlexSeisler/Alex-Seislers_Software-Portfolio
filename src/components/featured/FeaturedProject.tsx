@@ -38,6 +38,7 @@ const featuredProjects = [
     metrics: ["Efficiency Gains", "Owner Offload", "Pipeline Automation"]
   }
 ];
+
 export default function FeaturedProject() {
   return (
     <section className="py-20 bg-[#0A0F1C] relative overflow-hidden">
@@ -186,12 +187,6 @@ export default function FeaturedProject() {
             ease: "easeInOut"
           }}
         />
-      </div>
-    </section>
-  );
-}
-
-        </div>
       </div>
     </section>
   );
