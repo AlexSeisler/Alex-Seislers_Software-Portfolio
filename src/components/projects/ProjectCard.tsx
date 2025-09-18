@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Clock, Tag, ExternalLink, Github, ArrowRight, Calendar } from 'lucide-react';
 import { ProjectType } from '../../types/project';
-import { useNavigate } from 'react-router-dom'; // ✅ if using react-router
+import { useNavigate } from 'react-router-dom';
 
 interface ProjectCardProps {
   project: ProjectType;
@@ -19,9 +19,9 @@ export default function ProjectCard({ project, onSelect }: ProjectCardProps) {
   const handleDetailsClick = (e: React.MouseEvent) => {
     e.stopPropagation();
     if (isSpecial) {
-      navigate(`/case-study/${project.id}`); // ✅ redirect to case study
+      navigate(`/case-study/${project.id}`);
     } else {
-      onSelect(project.id); // fallback to popup
+      onSelect(project.id);
     }
   };
 
@@ -30,7 +30,7 @@ export default function ProjectCard({ project, onSelect }: ProjectCardProps) {
       className="group relative bg-gray-800/50 rounded-xl overflow-hidden cursor-pointer border-2 
         border-gray-700/50 hover:border-blue-500/50 transition-all duration-300"
       whileHover={{ y: -5 }}
-      onClick={() => onSelect(project.id)} // ✅ popup on card click
+      onClick={() => onSelect(project.id)}
     >
       {/* Image */}
       <div className="relative aspect-video overflow-hidden">
@@ -42,12 +42,12 @@ export default function ProjectCard({ project, onSelect }: ProjectCardProps) {
           transition={{ duration: 0.4 }}
         />
 
-        {/* Overlay */}
+        {/* Gradient Overlay (z-10 so links sit above) */}
         <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/60 to-transparent 
-          opacity-80 group-hover:opacity-90 transition-opacity" />
+          opacity-80 group-hover:opacity-90 transition-opacity z-10" />
 
-        {/* Category */}
-        <div className="absolute top-4 left-4">
+        {/* Category Badge */}
+        <div className="absolute top-4 left-4 z-20">
           <motion.div
             className="px-3 py-1.5 bg-blue-500/20 backdrop-blur-sm rounded-lg border border-blue-500/20 
               text-blue-400 text-sm font-medium"
@@ -56,6 +56,38 @@ export default function ProjectCard({ project, onSelect }: ProjectCardProps) {
             {project.category}
           </motion.div>
         </div>
+
+        {/* ✅ External Links */}
+        {(project.liveUrl || project.githubUrl) && (
+          <div className="absolute top-4 right-4 flex items-center gap-2 z-20">
+            {project.liveUrl && (
+              <motion.a
+                href={project.liveUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center w-8 h-8 bg-gray-800/90 backdrop-blur-sm 
+                  rounded-lg text-gray-400 hover:text-white hover:bg-gray-700 transition-all"
+                whileHover={{ scale: 1.1 }}
+                onClick={(e) => e.stopPropagation()}
+              >
+                <ExternalLink className="w-4 h-4" />
+              </motion.a>
+            )}
+            {project.githubUrl && (
+              <motion.a
+                href={project.githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center w-8 h-8 bg-gray-800/90 backdrop-blur-sm 
+                  rounded-lg text-gray-400 hover:text-white hover:bg-gray-700 transition-all"
+                whileHover={{ scale: 1.1 }}
+                onClick={(e) => e.stopPropagation()}
+              >
+                <Github className="w-4 h-4" />
+              </motion.a>
+            )}
+          </div>
+        )}
       </div>
 
       {/* Content */}
@@ -97,7 +129,7 @@ export default function ProjectCard({ project, onSelect }: ProjectCardProps) {
             </div>
           </div>
 
-          {/* ✅ Details / Case Study */}
+          {/* Details / Case Study */}
           <motion.button
             className="flex items-center gap-1.5 text-blue-400 hover:text-blue-300 transition-colors"
             whileHover={{ x: 5 }}
