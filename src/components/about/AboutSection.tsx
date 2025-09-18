@@ -18,16 +18,18 @@ export default function AboutSection() {
     >
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-16 items-start">
+          
+          {/* Left Column: Profile Card */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="flex justify-center"
           >
-            <ProfileCard />
+            <ProfileCard />   {/* ✅ no flex wrapper */}
           </motion.div>
-          
+
+          {/* Right Column: Content */}
           <motion.div 
             className="space-y-10"
             initial={{ opacity: 0, x: 20 }}
@@ -42,17 +44,10 @@ export default function AboutSection() {
           </motion.div>
         </div>
         
-        {/* Featured Work Snapshot - Full Width Below */}
-        <motion.div
-          className="mt-20"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-        >
-          <FeaturedWorkSnapshot />
-        </motion.div>
+        
       </div>
+
+
 
       {/* Background Elements */}
       <div className="absolute inset-0 pointer-events-none">

@@ -242,19 +242,6 @@ export const projectsData: ProjectType[] = [
     skills: ["Python Basics", "Data Parsing", "Script Dev"],
     challenges: ["Package Management", "CLI Design"],
     outcomes: ["Reusable Scripts", "Learning Outcomes"]
-  },
-  {
-    id: 15,
-    title: "Java Projects",
-    description: "Introductory Java builds created during academic year including data tools and desktop apps.",
-    category: "Extra Projects",
-    date: "2022 - 2023",
-    imageUrl: "/images/JavaProjects.png",
-    images: ["/images/JavaProjects.png"],
-    tags: ["Java", "OOP", "Desktop"],
-    duration: "4 months",
-    skills: ["OOP", "Data Handling"],
-    challenges: ["Syntax Flow", "UI Simplicity"],
-    outcomes: ["Functional Apps", "Practice Base"]
   }
+  
 ];

@@ -1,32 +1,23 @@
-import React, { useState } from 'react';
+import React from 'react';
 import ProjectCard from './ProjectCard';
-import ProjectModal from './ProjectModal';
-import { projectsData } from '../../data/projects';
+import { ProjectType } from '../../types/project';
 
-export default function ProjectsGrid() {
-  const [selectedProject, setSelectedProject] = useState<number | null>(null);
+interface ProjectGridProps {
+  projects: ProjectType[];
+  onProjectSelect: (id: number) => void;
+}
 
+export default function ProjectGrid({ projects, onProjectSelect }: ProjectGridProps) {
   return (
-    <section className="py-20 bg-gray-900">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projectsData.map((project, index) => (
-            <ProjectCard
-              key={index}
-              {...project}
-              onClick={() => setSelectedProject(index)}
-            />
-          ))}
-        </div>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {projects.map((project) => (
+        <ProjectCard
+          key={project.id}
+          project={project}
+          onSelect={(id) => onProjectSelect(id)}
+        />
 
-        {selectedProject !== null && (
-          <ProjectModal
-            isOpen={true}
-            onClose={() => setSelectedProject(null)}
-            project={projectsData[selectedProject]}
-          />
-        )}
-      </div>
-    </section>
+      ))}
+    </div>
   );
 }

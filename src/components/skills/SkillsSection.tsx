@@ -438,18 +438,25 @@ export default function SkillsSection() {
 
                   {/* Project Tags */}
                   <div className="mb-4">
-                    <p className="text-xs text-gray-500 mb-2">Projects showcasing this skill:</p>
+                    <p className="text-xs text-gray-400 mb-2 italic">
+                      Projects showcasing this skill (click to explore case studies) →
+                    </p>
+
                     <div className="flex flex-wrap gap-1">
                       {getSkillProjects(skill.title).map((project, i) => (
                         <Link
                           key={i}
                           to={`/case-study/${project.id}`}
-                          className="px-2 py-1 bg-blue-500/10 text-blue-400 rounded text-xs
-                            hover:bg-blue-500/20 transition-colors"
                           onClick={(e) => e.stopPropagation()}
+                          className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full text-xs font-medium
+                            bg-gradient-to-r from-blue-600/20 to-purple-600/20 text-blue-400 
+                            hover:from-blue-600/30 hover:to-purple-600/30 hover:text-blue-300
+                            transition-all duration-300 shadow-sm"
                         >
-                          {project.name}
+                          <span>{project.name}</span>
+                          <ArrowRight className="w-3 h-3" />
                         </Link>
+
                       ))}
                     </div>
                   </div>
