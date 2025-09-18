@@ -40,7 +40,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={
           <main className="bg-[#0A0F1C]">
-            <VideoSidebar />
+            {/*<VideoSidebar />*/}
             <Header />
             <AboutSection />
             <Timeline />
