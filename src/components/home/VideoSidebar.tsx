@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 
 export default function VideoSidebar() {
   const [isOpen, setIsOpen] = useState(true);
+  const [showVideo, setShowVideo] = useState(false);
 
   return (
     <AnimatePresence>
@@ -18,15 +19,29 @@ export default function VideoSidebar() {
         >
           <div className="bg-gray-900/95 backdrop-blur-lg rounded-xl border border-gray-700/50 overflow-hidden shadow-2xl">
             <div className="relative">
-              <div className="aspect-video bg-gradient-to-br from-blue-900/50 to-purple-900/50 flex items-center justify-center">
-                <motion.button
-                  className="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center
-                    hover:bg-white/20 transition-colors group"
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <Play className="w-6 h-6 text-white ml-1 group-hover:text-blue-300 transition-colors" />
-                </motion.button>
+              <div className="aspect-video">
+                {!showVideo ? (
+                  <div className="w-full h-full bg-gradient-to-br from-blue-900/50 to-purple-900/50 flex items-center justify-center">
+                    <motion.button
+                      onClick={() => setShowVideo(true)}
+                      className="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center
+                        hover:bg-white/20 transition-colors group"
+                      whileHover={{ scale: 1.1 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      <Play className="w-6 h-6 text-white ml-1 group-hover:text-blue-300 transition-colors" />
+                    </motion.button>
+                  </div>
+                ) : (
+                  <video
+                    src="/videos/AIDevTrifecta-Final.mp4"
+                    className="w-full h-full rounded-t-xl object-cover"
+                    controls
+                    autoPlay
+                    muted
+                    playsInline
+                  />
+                )}
               </div>
               
               <button
@@ -37,6 +52,7 @@ export default function VideoSidebar() {
                 <X className="w-4 h-4 text-white" />
               </button>
             </div>
+
 
             <div className="p-6">
               <h3 className="text-lg font-bold text-white mb-2">Portfolio Overview</h3>
