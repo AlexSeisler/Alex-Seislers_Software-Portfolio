@@ -179,18 +179,15 @@ export default function Header() {
           >
             <motion.div
               animate={{
+                scale: [1, 1.05, 1],
                 boxShadow: [
-                  '0 0 0 0 rgba(59, 130, 246, 0)',
-                  '0 0 0 8px rgba(59, 130, 246, 0.1)',
-                  '0 0 0 0 rgba(59, 130, 246, 0)'
+                  '0 0 20px rgba(59, 130, 246, 0.4)',
+                  '0 0 40px rgba(147, 51, 234, 0.6)',
+                  '0 0 20px rgba(59, 130, 246, 0.4)'
                 ]
               }}
-              transition={{
-                duration: 3,
-                repeat: Infinity,
-                ease: "easeInOut"
-              }}
-              className="rounded-lg"
+              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+              className="flex w-full sm:w-auto"   // ✅ matches ContactMe sizing
             >
               <Link 
                 to="/projects"
