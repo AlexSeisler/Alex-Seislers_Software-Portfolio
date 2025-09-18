@@ -18,6 +18,25 @@ import {
   ChevronDown,
   ChevronUp,
   Cpu,
+  Image,
+  CreditCard,
+  Upload,
+  Bell,
+  Book,
+  Zap,
+  Layout,
+  Plug,
+  Cloud,
+  User,
+  Camera,
+  Tag,
+  QrCode,
+  Palette,
+  BookOpen,
+  Video,
+  Star,
+  Mail,
+  Smartphone,
 } from "lucide-react";
 
 import { projectsData } from '../../data/projects';
@@ -226,12 +245,53 @@ function OverviewTab({ data }: { data: CaseStudy['overview'] }) {
             const roleTrimmed = role.trim();
 
             const icons: Record<string, JSX.Element> = {
+              // AI Dev Federation
               "CIAN (GM Agent)": <UserCheck className="w-6 h-6 text-blue-400" />,
               "System Architect": <GitBranch className="w-6 h-6 text-purple-400" />,
               "Security Architect": <ShieldCheck className="w-6 h-6 text-green-400" />,
               "DevBot": <Bot className="w-6 h-6 text-pink-400" />,
               "Trifecta Community": <Users className="w-6 h-6 text-yellow-400" />,
+
+              // ColumbiaPA300
+              "Civic Organizers": <Users className="w-6 h-6 text-blue-400" />,
+              "Finance Layer": <CreditCard className="w-6 h-6 text-green-400" />,
+              "Community Layer": <Upload className="w-6 h-6 text-yellow-400" />,
+              "Elections Board": <GitBranch className="w-6 h-6 text-purple-400" />,
+              "Slack Ops": <Bell className="w-6 h-6 text-pink-400" />,
+              "Historical Archive": <Book className="w-6 h-6 text-orange-400" />,
+
+              // ACSResultsAI
+              "Frontend Layer": <Zap className="w-6 h-6 text-yellow-400" />,
+              "UI/UX": <Layout className="w-6 h-6 text-blue-400" />,
+              "Pages": <GitBranch className="w-6 h-6 text-purple-400" />,
+              "Database Hooks": <Database className="w-6 h-6 text-green-400" />,
+              "Integration Hooks": <Plug className="w-6 h-6 text-pink-400" />,
+              "Deployment Layer": <Cloud className="w-6 h-6 text-orange-400" />,
+              "Tooling": <Settings className="w-6 h-6 text-gray-400" />,
+
+
+
+              // ACS Results
+              "Students": <User className="w-6 h-6 text-blue-400" />,
+              "Visual Showcase": <Camera className="w-6 h-6 text-purple-400" />,
+              "Design Layer": <Layers className="w-6 h-6 text-green-400" />,
+              "Lead Capture": <Bot className="w-6 h-6 text-pink-400" />,
+              "Business Funnel": <Tag className="w-6 h-6 text-yellow-400" />,
+              "Marketing Layer": <QrCode className="w-6 h-6 text-gray-400" />,
+
+
+
+              // RougeStoryWorld
+              "Design Layer": <Palette className="w-6 h-6 text-pink-400" />,
+              "Book Showcase": <BookOpen className="w-6 h-6 text-blue-400" />,
+              "Media Layer": <Video className="w-6 h-6 text-purple-400" />,
+              "About Section": <User className="w-6 h-6 text-green-400" />,
+              "Testimonials": <Star className="w-6 h-6 text-yellow-400" />,
+              "Email Capture": <Mail className="w-6 h-6 text-orange-400" />,
+              "Responsive UI": <Smartphone className="w-6 h-6 text-blue-400" />,
+
             };
+
 
             // Check if it's the last item in an odd-length array
             const isLastOdd = i === data.features.length - 1 && data.features.length % 2 !== 0;
