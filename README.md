@@ -11,7 +11,7 @@ A suite of autonomous AI agents and orchestration systems designed to collaborat
 - **[DevBot](https://github.com/AlexSeisler/DevbotKernelBackend)** - Autonomous backend execution agent that analyzes repos and generates safe patch proposals.
 - **Systems Architect** - AI agent handling upstream planning, queue management, and phased repo upgrades.
 - **AAO (Alignment + Opportunities Agent)** - SaaS agent that matches resumes to jobs and scholarships with AI resume parsing + opportunity matching.
-- **SMMAA** – Social Media Marketing Automation Agent for multi-client content pipelines and resellable inbound systems.
+- **SMMAA** - Social Media Marketing Automation Agent for multi-client content pipelines and resellable inbound systems.
 
 ---
 
