@@ -308,7 +308,7 @@ export const caseStudies: CaseStudy[] = [
     summary:
       "ColumbiaPA300 was a civic engagement platform built for the Borough of Columbia’s 300th Anniversary. It enabled residents, students, and civic organizers to participate in a digital hub that supported logo submissions, structured voting, community donations, media uploads, and civic storytelling. Over 100+ residents engaged through student logo contests, fundraising, and community media archiving.",
     demoUrl: "https://columbiapa300.netlify.app/",
-    repoOwner: "https://github.com/AlexSeisler",
+    repoOwner: "https://github.com/AlexSeisler/ColumbiaPA300",
     features: [
       "Civic Organizers → Logo Contest System with 100+ student submissions and 18 voting rounds",
       "Finance Layer → Donations via Stripe Checkout (~$1.5k raised)",
@@ -569,7 +569,7 @@ export const caseStudies: CaseStudy[] = [
     summary:
       "ACSResultsAI (AI Automation Agency) is a SaaS-style showcase platform built to demonstrate modern frontend design, automation service hooks, and professional deployment practices. It provides a clean UI, integration stubs for automation APIs, and a production-ready CI/CD pipeline. The system was used to present AI-powered agency services for small-to-medium businesses.",
     demoUrl: "https://acsresultsai-aaa.netlify.app",
-    repoOwner: "https://github.com/AlexSeisler",
+    repoOwner: "https://github.com/AlexSeisler/ACSResultsAI",
     features: [
       "Frontend Layer → React + Vite for high-performance static site delivery",
       "UI/UX → TailwindCSS + Shadcn UI + Framer Motion animations",
@@ -782,7 +782,7 @@ export const caseStudies: CaseStudy[] = [
     summary:
       "ACS Results was my first entrepreneurial project, built to give vocational and trade students a professional digital presence. The platform delivered personalized portfolio websites showcasing certifications, projects, and skills — bridging the gap between resumes and real-world showcases. It also served as my first business funnel, leading to paid client work (RougeStoryBookWorld).",
     demoUrl: "https://acsresults.netlify.app",
-    repoOwner: "https://github.com/AlexSeisler",
+    repoOwner: "https://github.com/AlexSeisler/ACS-Results",
     features: [
       "Students → Personalized portfolios with certifications, projects, and skills",
       "Visual Showcase → Before/after project demos for welding and fabrication",
@@ -967,7 +967,7 @@ F --> G[Recruiter Access]`,
     summary:
       "RougeStoryWorld is a professional landing page built for an independent audiobook creator. It functions as a marketing/eCommerce frontend — showcasing books, author bio, trailers, and testimonials — while driving conversions through Amazon’s storefront.",
     demoUrl: "https://rougestorybookworld.netlify.app",
-    repoOwner: "https://github.com/AlexSeisler",
+    repoOwner: "https://github.com/AlexSeisler/RougeStoryWorld",
     features: [
       "Design Layer → Animated hero section with logo and branding",
       "Book Showcase → Featured books with ratings and direct Amazon links",
