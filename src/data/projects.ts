@@ -30,7 +30,7 @@ export const projectsData: ProjectType[] = [
   {
     id: 2,
     title: "AI Dev Federation Dashboard",
-    description: "A portfolio-ready AI-powered dashboard showcasing multi-role collaboration between orchestrators, system architects, security architects, and DevBots. Combines authentication, Hugging Face LLM integration, and GitHub context fetching into a live recruiter-facing demo.",
+    description: "An AI-powered dashboard showcasing multi-role collaboration between orchestrators, system architects, security architects, and DevBots. Combines authentication, Hugging Face LLM integration, and GitHub context fetching into a live demo.",
     category: "ACS Results AI: Trifecta",
     date: "2025",
     imageUrl: "/images/AIDevFederationDashboard.png",
