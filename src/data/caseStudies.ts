@@ -41,7 +41,7 @@ export const caseStudies: CaseStudy[] = [
     id: 2,
     overview: {
       summary:
-        "The AI Dev Federation Dashboard is a full end-to-end system demonstrating a multi-agent orchestration layer for AI-assisted development. It mirrors a software org with agents – General Manager (CIAN), Architects, Security, and DevBot (engineer) – working together to plan, validate, and execute. This includes both the frontend dashboard (React + Tailwind) and backend services (FastAPI + GitHub integrations + LLM) that power live demos and execution flows.",
+        "The AI Dev Federation Dashboard is a full end-to-end system demonstrating a multi-agent orchestration layer for AI-assisted development. It mirrors a software org with agents: General Manager (CIAN), Architects, Security, and DevBot (engineer), working together to plan, validate, and execute. This includes both the frontend dashboard (React + Tailwind) and backend services (FastAPI + GitHub integrations + LLM) that power live demos and execution flows.",
       demoUrl: "https://aidevfederationdashboard.netlify.app/",
       repoOwner: "https://github.com/AlexSeisler/AI-Dev-Federation-Dashboard",
       features: [
@@ -93,7 +93,7 @@ export const caseStudies: CaseStudy[] = [
         { title: "INTEGRATIONS.md", url: "./INTEGRATIONS.md" },
         { title: "SECURITY.md", url: "./SECURITY.md" }
       ],
-      license: "MIT — Open for educational and portfolio use.",
+      license: "MIT - Open for educational and portfolio use.",
       community: "AI Dev: Trifecta Community"
     },
     integrations: [
@@ -361,7 +361,7 @@ export const caseStudies: CaseStudy[] = [
       { title: "INTEGRATIONS.md", url: "./INTEGRATIONS.md" },
       { title: "SECURITY.md", url: "./SECURITY.md" }
     ],
-    license: "MIT — Open for educational and referenced use.",
+    license: "MIT - Open for educational and referenced use.",
     community: "Civic Residents & Organizers"
   },
 
@@ -628,7 +628,7 @@ export const caseStudies: CaseStudy[] = [
       { title: "INTEGRATIONS.md", url: "./INTEGRATIONS.md" },
       { title: "SECURITY.md", url: "./SECURITY.md" }
     ],
-    license: "MIT — fork, adapt, extend freely.",
+    license: "MIT - fork, adapt, extend freely.",
     community: "Agency founders + SMB clients"
   },
 
@@ -780,7 +780,7 @@ export const caseStudies: CaseStudy[] = [
   id: 10,
   overview: {
     summary:
-      "ACS Results was my first entrepreneurial project, built to give vocational and trade students a professional digital presence. The platform delivered personalized portfolio websites showcasing certifications, projects, and skills — bridging the gap between resumes and real-world showcases. It also served as my first business funnel, leading to paid client work (RougeStoryBookWorld).",
+      "ACS Results was my first entrepreneurial project, built to give vocational and trade students a professional digital presence. The platform delivered personalized portfolio websites showcasing certifications, projects, and skills, bridging the gap between resumes and real-world showcases. It also served as my first business funnel, leading to paid client work (RougeStoryBookWorld).",
     demoUrl: "https://acsresults.netlify.app",
     repoOwner: "https://github.com/AlexSeisler/ACS-Results",
     features: [
@@ -830,7 +830,7 @@ export const caseStudies: CaseStudy[] = [
       { title: "BUSINESS_PLAN", url: "./BUSINESS_PLAN/" },
       { title: "ARTIFACTS", url: "./ARTIFACTS/" }
     ],
-    license: "MIT — Open for educational and referenced use.",
+    license: "MIT - Open for educational and referenced use.",
     community: "Thaddeus Stevens trade students + SMB clients"
   },
 
@@ -965,7 +965,7 @@ F --> G[Recruiter Access]`,
   id: 13,
   overview: {
     summary:
-      "RougeStoryWorld is a professional landing page built for an independent audiobook creator. It functions as a marketing/eCommerce frontend — showcasing books, author bio, trailers, and testimonials — while driving conversions through Amazon’s storefront.",
+      "RougeStoryWorld is a professional landing page built for an independent audiobook creator. It functions as a marketing/eCommerce frontend, showcasing books, author bio, trailers, and testimonials, while driving conversions through Amazon’s storefront.",
     demoUrl: "https://rougestorybookworld.netlify.app",
     repoOwner: "https://github.com/AlexSeisler/RougeStoryWorld",
     features: [
@@ -988,7 +988,7 @@ F --> G[Recruiter Access]`,
         "React Router DOM"
       ],
       backend: [
-        "No backend required — all payments handled via Amazon",
+        "No backend required, all payments handled via Amazon",
         "Mock email capture flow"
       ]
     },
@@ -1006,7 +1006,7 @@ F --> G[Recruiter Access]`,
     docs: [
       { title: "ARCHITECTURE.md", url: "./ARCHITECTURE.md" }
     ],
-    license: "MIT — Open for educational and referenced use.",
+    license: "MIT - Open for educational and referenced use.",
     community: "Independent audiobook readers and Amazon buyers"
   },
 

@@ -635,32 +635,7 @@ function ArchitectureTab({ data }: { data: CaseStudy["architecture"] }) {
         <h2 className="text-3xl font-bold text-white mb-4">
           System Architecture
         </h2>
-        <p className="text-lg text-gray-300 leading-relaxed mb-6">
-          {data?.purpose || "No architecture overview provided."}
-        </p>
-
-        <ul className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
-          <li className="flex items-center gap-2 text-gray-300">
-            <Bot className="w-5 h-5 text-blue-400" />
-            <span>CIAN → Validates + routes execution</span>
-          </li>
-          <li className="flex items-center gap-2 text-gray-300">
-            <GitBranch className="w-5 h-5 text-purple-400" />
-            <span>System Architect → Plans & decomposes tasks</span>
-          </li>
-          <li className="flex items-center gap-2 text-gray-300">
-            <ShieldCheck className="w-5 h-5 text-green-400" />
-            <span>Security Architect → Security-first placeholder</span>
-          </li>
-          <li className="flex items-center gap-2 text-gray-300">
-            <Cpu className="w-5 h-5 text-pink-400" />
-            <span>DevBot → Execution + patching</span>
-          </li>
-          <li className="flex items-center gap-2 text-gray-300">
-            <Users className="w-5 h-5 text-yellow-400" />
-            <span>Community Layer → Trifecta adoption</span>
-          </li>
-        </ul>
+        <p className="text-lg text-gray-300 leading-relaxed">{data?.purpose}</p>
       </div>
 
       {/* Frontend / Backend / Data */}
