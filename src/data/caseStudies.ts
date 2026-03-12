@@ -1127,7 +1127,279 @@ F --> G[Mock Success Message]`,
       "Polished UI suitable for client delivery and recruiter review"
     ]
   }
-}
+},
+{
+  id: 15,
+  overview: {
+    summary:
+      "Conversion Chatbot Framework is a production-grade AI chatbot system built for HYGO Labs as a structured 4-week engineering assessment. It delivers personality-aware conversations, a 4-layer hybrid memory architecture (buffer, summaries, semantic search via pgvector, and pinned facts), real-time SSE streaming, and an engagement lifecycle tracker (NEW -> LOYAL). The system is fully deployed as a monorepo - NestJS API on Railway, Next.js 14 frontend on Vercel - with auto-generated Swagger docs and 96%+ API test coverage.",
+    demoUrl: "https://github.com/HYGO-Labs/09-chatbot-framework-AlexSeisler/releases/tag/v1.0.0-final-submission",
+    repoOwner: "https://github.com/HYGO-Labs/09-chatbot-framework-AlexSeisler",
+    features: [
+      "Personality Engine -> Admin-guarded CRUD for personalities with system prompts, traits, and avatars.",
+      "Hybrid Memory -> 4-layer system: buffer (recent messages), summaries (compressed history), semantic search (pgvector), and pinned facts (cross-session persistence).",
+      "SSE Streaming -> Real-time token delivery with token/complete/error/heartbeat event types and graceful error + timeout handling.",
+      "Engagement Tracker -> Stage lifecycle (NEW -> ENGAGED -> ACTIVE -> LOYAL) with atomic session/message sequencing.",
+      "Admin Tooling -> Analytics dashboard, memory viewer, session management, and personality CRUD.",
+      "Auto-Generated Docs -> OpenAPI/Swagger generated from NestJS decorators; live at production API endpoint."
+    ],
+    capabilities: [
+      "Full multi-turn conversation with memory persisted across sessions via pgvector semantic retrieval.",
+      "96%+ API unit test coverage across services, guards, and business logic.",
+      "12 passing database tests (model validation + index performance).",
+      "Fully deployed monorepo: NestJS on Railway, Next.js 14 on Vercel.",
+      "Swagger docs live at production endpoint - recruiter and evaluator accessible.",
+      "Conversation summarization triggers on long sessions to manage context window limits."
+    ],
+    techStack: {
+      frontend: [
+        "Next.js 14 (App Router)",
+        "Tailwind CSS",
+        "TypeScript",
+        "Shared types package (@project-9/types)"
+      ],
+      backend: [
+        "NestJS 11 + TypeScript",
+        "PostgreSQL 15 + Prisma ORM",
+        "pgvector -> semantic memory search",
+        "SSE (Server-Sent Events) streaming",
+        "OpenAI API (streaming completions)",
+        "Vitest + Supertest (unit + integration tests)",
+        "Playwright (E2E foundation)",
+        "Railway (API deployment)",
+        "Vercel (frontend deployment)"
+      ]
+    },
+    repoStructure: `09-chatbot-framework-AlexSeisler/
+|- apps/
+|  |- api/               # NestJS backend (Port 3001)
+|  |  |- src/
+|  |  |  |- chat/        # Sessions, messages, SSE streaming
+|  |  |  |- memory/      # Hybrid memory system
+|  |  |  |- personality/ # Personality engine + admin CRUD
+|  |  |  |- engagement/  # Stage tracking (NEW -> LOYAL)
+|  |  |  |- admin/       # Analytics + memory/session tooling
+|  |  |- README.md
+|  |- web/               # Next.js 14 frontend (Port 3000)
+|     |- README.md
+|- packages/
+|  |- database/          # Prisma schema + migrations + pgvector
+|  |- types/             # Shared TypeScript types
+|- scripts/              # setup/dev automation
+|- docs/
+|  |- ADRs/              # Architecture Decision Records
+|  |- api/               # OpenAPI spec, SSE events, overview
+|  |- database/          # ERD, schema spec, Prisma schema
+|  |- architecture/      # Component, Memory, BPMN diagrams
+|  |- WorkLogs/          # Daily tracker + dev logs
+|- .coverage-badges/     # Auto-generated coverage badges
+|- package.json          # Monorepo root (npm workspaces)
+|- README.md`,
+    docs: [
+      { title: "Final Architecture ADR", url: "./docs/ADRs/007-Final-Architecture.md" },
+      { title: "API Overview", url: "./docs/api/overview.md" },
+      { title: "SSE Events", url: "./docs/api/sse-events.md" },
+      { title: "OpenAPI Specification", url: "./docs/api/openapi.yaml" },
+      { title: "Database Schema", url: "./docs/database/schema-specification.md" },
+      { title: "ERD Diagram", url: "./docs/database/Diagrams/ERD_implementation.pdf" },
+      { title: "Memory Architecture Diagram", url: "./docs/architecture/Memory-System-Architecture.png" },
+      { title: "Component Architecture", url: "./docs/architecture/Component-Architecture.png" },
+      { title: "End-to-End Flow (BPMN)", url: "./docs/architecture/End-to-End-Flow-BPMN-V3.png" }
+    ],
+    license: "Private - HYGO Labs GitHub Classroom submission.",
+    community: "HYGO Labs Evaluators + AI Systems Engineering cohort"
+  },
+  integrations: [
+    {
+      name: "OpenAI API (Streaming Completions)",
+      items: [
+        { name: "Purpose", purpose: "Generate personality-aware chat responses with real-time token streaming" },
+        { name: "Integration", purpose: "NestJS chat module calls OpenAI streaming endpoint; tokens emitted via SSE to frontend" },
+        { name: "Features", purpose: "Token-by-token delivery, complete/error/heartbeat events, graceful connection drop handling" },
+        { name: "Risks", purpose: "API key must remain in .env; streaming reliability tied to OpenAI uptime; cost managed via mock fallback" }
+      ]
+    },
+    {
+      name: "PostgreSQL 15 + Prisma ORM",
+      items: [
+        { name: "Purpose", purpose: "Primary data store for sessions, messages, memories, personalities, and engagement records" },
+        { name: "Integration", purpose: "Prisma schema in packages/database; ORM used across all NestJS modules; migrations version-controlled" },
+        { name: "Features", purpose: "Atomic session/message sequencing; relational model for users, sessions, personalities, memories" },
+        { name: "Risks", purpose: "Connection pooling required at scale; separate test DB (port 5433) prevents prod conflicts during integration tests" }
+      ]
+    },
+    {
+      name: "pgvector (Semantic Memory Search)",
+      items: [
+        { name: "Purpose", purpose: "Power semantic retrieval of long-term memories relevant to current conversation context" },
+        { name: "Integration", purpose: "pgvector extension enabled on PostgreSQL; memory embeddings stored and queried via similarity search" },
+        { name: "Features", purpose: "Retrieves contextually relevant facts from past sessions without full conversation replay" },
+        { name: "Risks", purpose: "Embedding quality determines retrieval accuracy; vector index performance degrades at scale without tuning" }
+      ]
+    },
+    {
+      name: "SSE (Server-Sent Events)",
+      items: [
+        { name: "Purpose", purpose: "Stream AI response tokens to the frontend in real-time" },
+        { name: "Integration", purpose: "NestJS SSE endpoint emits token/complete/error/heartbeat events; Next.js frontend consumes EventSource" },
+        { name: "Features", purpose: "Typing indicator support, graceful timeout and error states, heartbeat to maintain connection" },
+        { name: "Risks", purpose: "Connection drops require client-side reconnection logic; load balancers may cut long-lived connections" }
+      ]
+    },
+    {
+      name: "Railway (API Deployment)",
+      items: [
+        { name: "Purpose", purpose: "Host NestJS backend and PostgreSQL database in production" },
+        { name: "Integration", purpose: "Monorepo API deployed from apps/api; environment variables injected via Railway dashboard" },
+        { name: "Features", purpose: "Auto-deploy from GitHub, managed PostgreSQL instance, production environment isolation" },
+        { name: "Risks", purpose: "Free tier cold starts may impact demo response time; database URL must remain secret" }
+      ]
+    },
+    {
+      name: "Vercel (Frontend Deployment)",
+      items: [
+        { name: "Purpose", purpose: "Host Next.js 14 frontend in production" },
+        { name: "Integration", purpose: "Deployed from apps/web in monorepo; environment variables scoped to frontend only" },
+        { name: "Features", purpose: "Edge CDN delivery, preview deployments, Next.js 14 App Router optimizations" },
+        { name: "Risks", purpose: "API URL must be set correctly in Vercel env; CORS must be configured on Railway API" }
+      ]
+    },
+    {
+      name: "Vitest + Supertest + Playwright (Testing)",
+      items: [
+        { name: "Purpose", purpose: "Enforce quality across unit, integration, and E2E layers" },
+        { name: "Integration", purpose: "Vitest + Supertest for API; Playwright for web E2E foundation; separate test DB for integration isolation" },
+        { name: "Features", purpose: "96%+ API coverage; 12 database model tests; coverage badge auto-generation" },
+        { name: "Risks", purpose: "Integration tests require live test DB (port 5433) and running server; E2E foundation not yet at full coverage" }
+      ]
+    }
+  ],
+  security: [
+    {
+      title: "API Keys & Environment Secrets",
+      description: "OpenAI API key and database URLs managed via .env and never committed.",
+      implementations: [
+        ".env excluded from git; .env.example provided with placeholders",
+        "Railway and Vercel inject secrets at runtime via dashboard",
+        "Separate DATABASE_TEST_URL prevents test runs from hitting production DB"
+      ]
+    },
+    {
+      title: "Admin Route Protection",
+      description: "Personality management and admin analytics are guarded behind admin-only access controls.",
+      implementations: [
+        "NestJS guards enforce admin-only access on CRUD endpoints",
+        "Personality system prompt data not exposed to end-user API surface",
+        "Admin tooling (memory viewer, session management) restricted to authorized roles"
+      ]
+    },
+    {
+      title: "Input Sanitization",
+      description: "Chat messages and personality inputs validated before processing or persisting.",
+      implementations: [
+        "NestJS DTOs with class-validator enforce input shape",
+        "Message content sanitized before injection into OpenAI context",
+        "Conversation length limits prevent context window overflow attacks"
+      ]
+    },
+    {
+      title: "Database Security",
+      description: "Prisma ORM prevents raw SQL injection; connection strings secured.",
+      implementations: [
+        "All queries via Prisma ORM - no raw SQL surface",
+        "DATABASE_URL and DATABASE_TEST_URL stored in .env only",
+        "pgvector embeddings stored with scoped access per session/user"
+      ]
+    },
+    {
+      title: "Streaming Connection Safety",
+      description: "SSE endpoint handles error, timeout, and connection drop states gracefully.",
+      implementations: [
+        "Heartbeat events maintain connection health",
+        "Error event type emitted on failure - no silent drops",
+        "Server-side timeout handling prevents hung connections"
+      ]
+    }
+  ],
+  architecture: {
+    purpose:
+      "The Conversion Chatbot Framework was built as a production-grade monorepo demonstrating advanced backend engineering: a 4-layer hybrid memory system, real-time SSE streaming, a personality engine, and engagement lifecycle tracking - fully deployed and tested.",
+    frontend: [
+      "Next.js 14 (App Router) + TypeScript",
+      "Tailwind CSS for styling",
+      "EventSource API for SSE consumption",
+      "Shared @project-9/types package for type safety across monorepo"
+    ],
+    backend: [
+      "NestJS 11 modular architecture (chat, memory, personality, engagement, admin)",
+      "SSE streaming endpoint: token/complete/error/heartbeat events",
+      "Hybrid memory service: buffer -> summary -> semantic (pgvector) -> pinned facts",
+      "Engagement state machine: NEW -> ENGAGED -> ACTIVE -> LOYAL",
+      "Auto-generated OpenAPI/Swagger from NestJS decorators",
+      "Prisma ORM across all modules; atomic sequencing on sessions/messages"
+    ],
+    storage: [
+      "PostgreSQL 15 -> sessions, messages, personalities, memories, engagement records",
+      "pgvector extension -> semantic memory embeddings for cross-session retrieval",
+      "Prisma schema (packages/database) -> single source of truth for DB structure",
+      "Test DB (port 5433) -> isolated integration test environment"
+    ],
+    dataFlow: `flowchart TB
+    subgraph "Client Layer"
+        User[User]
+        Browser[Browser / Next.js 14]
+    end
 
+    subgraph "Application Layer"
+        WebApp[Next.js Frontend - Vercel]
+        API[NestJS Backend - Railway]
+    end
+
+    subgraph "Core Modules"
+        Memory[Memory System\nBuffer + Summary + Semantic + Facts]
+        Engagement[Engagement Tracker\nNEW -> LOYAL]
+        Personality[Personality Engine]
+        Chat[Chat Module\nSessions + Messages]
+    end
+
+    subgraph "Data Layer"
+        Prisma[Prisma ORM]
+        PostgreSQL[(PostgreSQL 15 + pgvector)]
+    end
+
+    User --> Browser
+    Browser -->|SSE Chat UI| WebApp
+    WebApp -->|HTTP/SSE| API
+    API --> Memory
+    API --> Engagement
+    API --> Personality
+    API --> Chat
+    Memory --> Prisma
+    Engagement --> Prisma
+    Personality --> Prisma
+    Chat --> Prisma
+    Prisma --> PostgreSQL`,
+    subsystems: [
+      { name: "personality_engine", impl: "NestJS Personality Module", purpose: "Admin-guarded CRUD; system prompt, traits, avatar per personality" },
+      { name: "chat_module", impl: "NestJS Chat Module", purpose: "Session creation, message persistence, atomic sequencing" },
+      { name: "sse_streaming", impl: "NestJS SSE Endpoint + EventSource", purpose: "Token-by-token real-time streaming with error/heartbeat handling" },
+      { name: "memory_system", impl: "pgvector + Prisma + Summarization", purpose: "4-layer hybrid: buffer, summaries, semantic search, pinned facts" },
+      { name: "engagement_tracker", impl: "NestJS Engagement Module", purpose: "Stage lifecycle tracking with metric aggregation" },
+      { name: "admin_tooling", impl: "NestJS Admin Module", purpose: "Analytics dashboard, memory viewer, session management" },
+      { name: "database_layer", impl: "PostgreSQL 15 + Prisma + pgvector", purpose: "Relational storage + vector embeddings for semantic retrieval" },
+      { name: "test_suite", impl: "Vitest + Supertest + Playwright", purpose: "96%+ API coverage; unit, integration, and E2E layers" },
+      { name: "api_docs", impl: "NestJS Swagger auto-generation", purpose: "Live OpenAPI docs at production Railway URL" },
+      { name: "deployment", impl: "Railway (API) + Vercel (Web)", purpose: "Production monorepo deployment with environment isolation" }
+    ],
+    strengths: [
+      "4-layer memory system solves the core AI chatbot statelessness problem - facts persist and are retrieved semantically across sessions",
+      "SSE streaming with heartbeat/error handling reflects production reliability standards",
+      "Monorepo architecture with shared types enforces contract consistency between frontend and backend",
+      "96%+ API test coverage and isolated test DB demonstrate engineering rigor beyond standard portfolio projects",
+      "Auto-generated Swagger docs live at production endpoint - immediately accessible to evaluators and recruiters",
+      "Evaluation-aligned design: memory (25%), streaming (25%), DB design (20%) are the three strongest layers"
+    ]
+  }
+}
 
 ]

@@ -29,7 +29,7 @@ const achievements = [
       title: 'Competition Success',
       description: 'Placed across multiple regional collegiate competitions, solving real-time algorithmic and system design challenges.',
       highlights: [
-        'TSCT – 2nd Place',
+        'TSCT – 1st Place',
         'West Chester – 2nd Place',
         'Bloomsburg – 3rd Place',
         'HACC – 2nd Place'

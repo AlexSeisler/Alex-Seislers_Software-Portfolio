@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, ExternalLink, Github } from 'lucide-react';
 import { projectsData } from '../data/projects';
 
-const featuredProjects = [2, 12, 6, 10, 13]
+const featuredProjects = [15, 2, 12, 6, 10, 13]
   .map(id => projectsData.find(p => p.id === id))
   .filter(Boolean);
 
@@ -55,7 +55,7 @@ export default function CaseStudiesPage() {
         {/* Case Studies */}
         <div className="grid lg:grid-cols-2 gap-8 mb-16">
           {featuredProjects.map((project, index) => {
-            const isFlagship = [2, 12].includes(project.id);
+            const isFlagship = [15, 2, 12].includes(project.id);
             const isLastOdd = index === featuredProjects.length - 1 && featuredProjects.length % 2 !== 0;
 
             return (

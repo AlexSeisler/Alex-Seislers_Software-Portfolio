@@ -227,6 +227,35 @@ export const projectsData: ProjectType[] = [
     liveUrl: "https://rougestorybookworld.netlify.app/",
     githubUrl: "https://github.com/AlexSeisler/RougeStoryWorld"
   },
+  {
+    id: 15,
+    title: "Conversion Chatbot Framework",
+    description: "Production-grade AI chatbot system built for HYGO Labs with hybrid memory, SSE streaming, personality engine, and engagement lifecycle tracking.",
+    category: "HYGO Labs",
+    date: "2026",
+    imageUrl: "/images/HYGO.png",
+    images: ["/images/HYGO.png", "/images/ChatBot1.png", "/images/ChatBot2.png", "/images/ChatBot3.png", "/images/ChatBot4.png"],
+    tags: ["NestJS", "Next.js 14", "pgvector", "SSE", "Prisma"],
+    duration: "4 weeks",
+    skills: [
+      "Hybrid Memory Architecture",
+      "SSE Streaming Systems",
+      "NestJS Modular Backend",
+      "Next.js App Router",
+      "API Testing & Coverage"
+    ],
+    challenges: [
+      "Maintaining reliable real-time SSE streams under timeout/error conditions",
+      "Persisting conversational context across sessions with semantic retrieval"
+    ],
+    outcomes: [
+      "96%+ API unit test coverage",
+      "Production deployment on Railway + Vercel",
+      "Evaluator-ready Swagger documentation"
+    ],
+    liveUrl: "https://github.com/HYGO-Labs/09-chatbot-framework-AlexSeisler/releases/tag/v1.0.0-final-submission",
+    githubUrl: "https://github.com/HYGO-Labs/09-chatbot-framework-AlexSeisler"
+  },
 
   // === Extra Projects ===
   {

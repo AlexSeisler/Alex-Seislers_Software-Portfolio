@@ -4,6 +4,11 @@ import { Link } from 'react-router-dom';
 
 const projectPreviews = [
   {
+    image: "/images/HYGO.png",
+    title: "HYGO Labs",
+    id: 15
+  },
+  {
     image: "/images/AIDevFederationDashboard.png",
     title: "AI Federation",
     id: 2

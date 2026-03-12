@@ -13,7 +13,7 @@ export default function ProjectCard({ project, onSelect }: ProjectCardProps) {
   const navigate = useNavigate();
 
   // ✅ Flagships + Case Studies IDs
-  const specialIds = [2, 12, 6, 10, 13];
+  const specialIds = [2, 12, 6, 10, 13, 15];
   const isSpecial = specialIds.includes(project.id);
 
   const handleDetailsClick = (e: React.MouseEvent) => {

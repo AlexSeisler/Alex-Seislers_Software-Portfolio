@@ -5,6 +5,17 @@ import { Link } from 'react-router-dom';
 
 const featuredProjects = [
   {
+    id: 15,
+    title: "Conversion Chatbot Framework",
+    subtitle: "HYGO Labs Flagship Assessment",
+    description: "Production-grade chatbot framework with hybrid memory, SSE streaming, and deployment on Railway + Vercel.",
+    image: "/images/HYGO.png",
+    tags: ["NestJS", "Next.js 14", "pgvector"],
+    liveUrl: "https://github.com/HYGO-Labs/09-chatbot-framework-AlexSeisler/releases/tag/v1.0.0-final-submission",
+    githubUrl: "https://github.com/HYGO-Labs/09-chatbot-framework-AlexSeisler",
+    metrics: ["Hybrid Memory", "Real-time SSE", "96%+ API Coverage"]
+  },
+  {
     id: 2,
     title: "AI Dev Federation Dashboard",
     subtitle: "Multi-Agent Orchestration Platform",

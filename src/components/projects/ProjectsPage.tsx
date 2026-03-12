@@ -18,9 +18,13 @@ export default function ProjectsPage() {
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, { stiffness: 100, damping: 30, restDelta: 0.001 });
 
-  const flagshipProjects = projectsData.filter(p => [2, 12].includes(p.id));
-  const caseStudyProjects = projectsData.filter(p => [6, 10, 13].includes(p.id));
-  const supportingProjects = projectsData.filter(p => ![2, 12, 6, 10, 13].includes(p.id));
+  const flagshipProjects = [15, 2, 12]
+    .map(id => projectsData.find(p => p.id === id))
+    .filter((project): project is NonNullable<typeof project> => Boolean(project));
+  const caseStudyProjects = [6, 10, 13]
+    .map(id => projectsData.find(p => p.id === id))
+    .filter((project): project is NonNullable<typeof project> => Boolean(project));
+  const supportingProjects = projectsData.filter(p => ![15, 2, 12, 6, 10, 13].includes(p.id));
 
   const filteredSupporting = supportingProjects.filter(project => {
     const matchesSearch =
