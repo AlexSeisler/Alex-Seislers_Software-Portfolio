@@ -10,8 +10,8 @@ const featuredProjects = [
     description: "Production-grade chatbot framework with hybrid memory, real-time SSE, and admin tooling",
     image: "/images/HYGO.png",
     tags: ["NestJS", "Next.js 14", "pgvector"],
-    liveUrl: "https://github.com/HYGO-Labs/09-chatbot-framework-AlexSeisler/releases/tag/v1.0.0-final-submission",
-    githubUrl: "https://github.com/HYGO-Labs/09-chatbot-framework-AlexSeisler"
+    liveUrl: "https://github.com/AlexSeisler/chatbot-framework-deploy",
+    githubUrl: "https://github.com/AlexSeisler/chatbot-framework-deploy"
   },
   {
     id: 2,

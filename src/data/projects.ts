@@ -253,8 +253,8 @@ export const projectsData: ProjectType[] = [
       "Production deployment on Railway + Vercel",
       "Evaluator-ready Swagger documentation"
     ],
-    liveUrl: "https://github.com/HYGO-Labs/09-chatbot-framework-AlexSeisler/releases/tag/v1.0.0-final-submission",
-    githubUrl: "https://github.com/HYGO-Labs/09-chatbot-framework-AlexSeisler"
+    liveUrl: "https://github.com/AlexSeisler/chatbot-framework-deploy",
+    githubUrl: "https://github.com/AlexSeisler/chatbot-framework-deploy"
   },
 
   // === Extra Projects ===

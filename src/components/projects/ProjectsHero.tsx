@@ -11,8 +11,8 @@ const flagshipProjects = [
     description: "Production-grade chatbot framework with a 4-layer hybrid memory system, SSE streaming, and monorepo deployment on Railway + Vercel.",
     image: "/images/HYGO.png",
     tags: ["NestJS", "Next.js 14", "pgvector", "SSE"],
-    liveUrl: "https://github.com/HYGO-Labs/09-chatbot-framework-AlexSeisler/releases/tag/v1.0.0-final-submission",
-    githubUrl: "https://github.com/HYGO-Labs/09-chatbot-framework-AlexSeisler",
+    liveUrl: "https://github.com/AlexSeisler/chatbot-framework-deploy",
+    githubUrl: "https://github.com/AlexSeisler/chatbot-framework-deploy",
     featured: true,
     metrics: ["Hybrid Memory", "Real-time Streaming", "96%+ API Coverage"]
   },
