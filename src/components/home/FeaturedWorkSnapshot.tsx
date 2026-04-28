@@ -10,7 +10,7 @@ const featuredProjects = [
     description: "Production-grade chatbot framework with hybrid memory, real-time SSE, and admin tooling",
     image: "/images/HYGO.png",
     tags: ["NestJS", "Next.js 14", "pgvector"],
-    liveUrl: "https://github.com/AlexSeisler/chatbot-framework-deploy",
+    liveUrl: "https://chatbot-framework-deploy-web.vercel.app/",
     githubUrl: "https://github.com/AlexSeisler/chatbot-framework-deploy"
   },
   {

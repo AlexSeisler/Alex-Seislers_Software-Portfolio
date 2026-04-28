@@ -1133,7 +1133,7 @@ F --> G[Mock Success Message]`,
   overview: {
     summary:
       "Conversion Chatbot Framework is a production-grade AI chatbot system built for HYGO Labs as a structured 4-week engineering assessment. It delivers personality-aware conversations, a 4-layer hybrid memory architecture (buffer, summaries, semantic search via pgvector, and pinned facts), real-time SSE streaming, and an engagement lifecycle tracker (NEW -> LOYAL). The system is fully deployed as a monorepo - NestJS API on Railway, Next.js 14 frontend on Vercel - with auto-generated Swagger docs and 96%+ API test coverage.",
-    demoUrl: "https://github.com/AlexSeisler/chatbot-framework-deploy",
+    demoUrl: "https://chatbot-framework-deploy-web.vercel.app/",
     repoOwner: "https://github.com/AlexSeisler/chatbot-framework-deploy",
     features: [
       "Personality Engine -> Admin-guarded CRUD for personalities with system prompts, traits, and avatars.",
@@ -1356,10 +1356,10 @@ F --> G[Mock Success Message]`,
     end
 
     subgraph "Core Modules"
-        Memory[Memory System\nBuffer + Summary + Semantic + Facts]
-        Engagement[Engagement Tracker\nNEW -> LOYAL]
-        Personality[Personality Engine]
-        Chat[Chat Module\nSessions + Messages]
+        Memory["Memory System<br/>Buffer + Summary + Semantic + Facts"]
+        Engagement["Engagement Tracker<br/>NEW to LOYAL"]
+        Personality["Personality Engine"]
+        Chat["Chat Module<br/>Sessions + Messages"]
     end
 
     subgraph "Data Layer"

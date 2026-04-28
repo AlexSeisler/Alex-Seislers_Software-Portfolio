@@ -1,48 +1,68 @@
-import { Bot, Briefcase, GraduationCap, MonitorSmartphone, Trophy, UserCog, BookOpen } from 'lucide-react';
+import {
+  Bot,
+  Briefcase,
+  GraduationCap,
+  MonitorSmartphone,
+  Trophy,
+  BookOpen,
+  Landmark,
+  BrainCircuit
+} from 'lucide-react';
 
 export const timelineItems = [
   {
-    icon: Bot,
-    title: "ACS Results AI Launch",
-    date: "December 2024",
-    description: "Founded AI automation agency with full-stack systems",
+    icon: BrainCircuit,
+    title: "HYGO Labs Engineering Trial",
+    date: "2026",
+    description: "Built production chatbot framework with LLM memory orchestration",
     achievements: [
-      "Built multi-agent orchestration pipelines",
-      "Deployed AI SaaS using FastAPI + Supabase",
-      "Automated backend dev with GPT-4o"
+      "Implemented hybrid context: recent messages, summaries, semantic memory, pinned facts",
+      "Built SSE streaming with async summarization and fallback-safe memory layers",
+      "Reached 98.38% API line coverage and 100% API function coverage"
     ]
   },
   {
-    icon: Briefcase,
-    title: "Team Lead – Portfolio Systems",
-    date: "July 2024 – Nov 2024",
-    description: "Led portfolio site development for clients",
+    icon: Bot,
+    title: "AI Dev Federation Dashboard",
+    date: "Jul 2025 – Present",
+    description: "Built multi-agent orchestration platform for AI-assisted development",
     achievements: [
-      "Managed 4-person development team",
-      "Shipped 10+ client websites",
-      "Standardized reusable frontend templates"
+      "Built CIAN, System Architect, Security Architect, and DevBot workflows",
+      "Integrated Hugging Face completions with GitHub repo context",
+      "Reduced design-to-deploy cycle time by roughly 85% in demo workflows"
+    ]
+  },
+  {
+    icon: Landmark,
+    title: "ColumbiaPA300 Civic Engagement Platform",
+    date: "May 2025 – Aug 2025",
+    description: "Built production civic SaaS for Columbia, PA anniversary campaign",
+    achievements: [
+      "Served 100+ active residents, students, and civic organizers",
+      "Processed $1.5K+ in Stripe donations with 150+ votes/submissions",
+      "Integrated Slack alerts, Google Drive uploads, Airtable, and serverless functions"
     ]
   },
   {
     icon: MonitorSmartphone,
-    title: "Automation Dev – Red Rose Digital",
-    date: "April 2025 – Present",
-    description: "Built AI-powered agency platforms for marketing",
+    title: "ACS Results AI – Automation Platform",
+    date: "Jan 2025 – Apr 2025",
+    description: "Built AI automation systems for small-business workflows",
     achievements: [
-      "Automated video-to-post pipelines",
-      "Integrated Zapier, intake, distribution",
-      "Scaled agency client delivery"
+      "Built React/TypeScript automation showcase with Supabase-backed architecture",
+      "Integrated Voiceflow, Vapi, Make, n8n, and lead-generation workflows",
+      "Delivered 3+ client-facing automation projects before pivoting deeper into engineering"
     ]
   },
   {
-    icon: UserCog,
-    title: "Freelance AI Builder",
-    date: "Sep 2024 – Mar 2025",
-    description: "Created GPT tools for small businesses",
+    icon: Briefcase,
+    title: "ACS Results – Student Portfolio SaaS",
+    date: "Oct 2024 – Feb 2025",
+    description: "Launched portfolio SaaS for vocational students and early clients",
     achievements: [
-      "Built auto-reply + parsing agents",
-      "Used FastAPI, Tailwind, OpenAI",
-      "Deployed 5+ internal AI tools"
+      "Delivered 22+ live student portfolios",
+      "Generated $1K+ in early SaaS revenue through tiered pricing",
+      "Built reusable frontend templates and Stripe payment flows"
     ]
   },
   {
@@ -52,16 +72,17 @@ export const timelineItems = [
     description: "Software Engineering | 4.0 GPA",
     achievements: [
       "Dean’s List, SGA Member",
-      "Excelled in backend + database",
-      "Built advanced web projects"
+      "Focused on backend, databases, and full-stack systems",
+      "Built advanced web and database projects"
     ]
   },
   {
     icon: Trophy,
     title: "Coding Competition Wins",
     date: "2024",
-    description: "Placed across multiple universities",
+    description: "Placed in regional university coding competitions",
     achievements: [
+      "TSCT – 1st Place",
       "West Chester – 2nd Place",
       "Bloomsburg – 3rd Place",
       "HACC – 2nd Place"
@@ -73,7 +94,7 @@ export const timelineItems = [
     date: "Dec 2023 – Jun 2024",
     description: "Taught beginner Python fundamentals",
     achievements: [
-      "Wrote intro Python curriculum",
+      "Wrote intro Python lessons and exercises",
       "Led student coding workshops",
       "Mentored 10+ new programmers"
     ]

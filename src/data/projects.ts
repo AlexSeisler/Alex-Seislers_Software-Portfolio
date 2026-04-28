@@ -253,7 +253,7 @@ export const projectsData: ProjectType[] = [
       "Production deployment on Railway + Vercel",
       "Evaluator-ready Swagger documentation"
     ],
-    liveUrl: "https://github.com/AlexSeisler/chatbot-framework-deploy",
+    liveUrl: "https://chatbot-framework-deploy-web.vercel.app/",
     githubUrl: "https://github.com/AlexSeisler/chatbot-framework-deploy"
   },
 
